@@ -50,5 +50,5 @@ for i in all_params.keys():
 # df.to_csv('1.csv')
 
 dic_all[name] = new_dict_for_dump
-with open("config_Test.json", "w") as outfile:
+with open("result/config_Test.json", "w") as outfile:
     json.dump(dic_all, outfile, indent=2)

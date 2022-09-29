@@ -11,4 +11,4 @@ for line in lines:
         print(q)
         df = pd.concat([df, q])
 
-df.to_csv('1.csv')
+df.to_csv('result/all_default_properties.csv')

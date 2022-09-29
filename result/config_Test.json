@@ -2,16 +2,16 @@
   "org.apache.kylin.common.KylinConfigTest": {
     "testCreateInstanceFromUriThrowsRuntimeException": [
       "kylin.restclient.connection.max-total",
-      "kylin.metadata.url",
-      "kylin.restclient.connection.default-max-per-route"
+      "kylin.restclient.connection.default-max-per-route",
+      "kylin.metadata.url"
     ],
     "testCreateInstanceFromUriThrowsIllegalStateExceptionOne": [
       "kylin.metadata.url"
     ],
     "testMRConfigOverride": [
       "kylin.engine.mr.config-override.test2",
-      "kylin.engine.mr.config-override.test1",
-      "kylin.metadata.url"
+      "kylin.metadata.url",
+      "kylin.engine.mr.config-override.test1"
     ],
     "testThreadLocalOverride": [
       "kylin.metadata.url"
@@ -33,16 +33,16 @@
     ],
     "testUnexpectedBlackInPro": [
       "kylin.engine.mr.config-override.test2",
-      "kylin.engine.mr.config-override.test1",
-      "kylin.metadata.url"
+      "kylin.metadata.url",
+      "kylin.engine.mr.config-override.test1"
     ],
     "testGetMetadataUrlPrefix": [
       "kylin.metadata.url"
     ],
     "testBackwardCompatibility": [
-      "kylin.test.bcc.new.key",
       "kylin.metadata.url",
-      "kylin.test.bcc.old.key"
+      "kylin.test.bcc.old.key",
+      "kylin.test.bcc.new.key"
     ],
     "testCalciteExtrasProperties": [
       "kylin.metadata.url",
