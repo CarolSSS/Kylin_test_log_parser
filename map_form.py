@@ -3,8 +3,10 @@ from tkinter.ttk import Style
 import pandas as pd
 import json 
 
+# Map single test configurations into json map
+
 df = pd.DataFrame()
-lines = open('test.log', "r").readlines()
+lines = open('data/test.log', "r").readlines()
 dic_all = {}
 all_params = {}
 key = ''

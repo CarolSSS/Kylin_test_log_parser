@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 df = pd.DataFrame(columns =['variable', 'value'])
-lines = open('kylin-defaults.properties', "r").readlines()
+lines = open('data/kylin-defaults.properties', "r").readlines()
 for line in lines:
     line = line.strip("\n")
     if "=" in line and line[0] != '#':
