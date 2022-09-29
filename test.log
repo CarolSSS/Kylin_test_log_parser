@@ -1,0 +1,294 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-core-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1115, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-metadata:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 51, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 65, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-query:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 144, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-soft-affinity-cache:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 62, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin:pom:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1115, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< org.apache.kylin:kylin-core-common >-----------------
+[INFO] Building Apache Kylin - Core Common 4.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[WARNING] Could not transfer metadata net.minidev:json-smart/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ kylin-core-common ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (check-style) @ kylin-core-common ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-test) @ kylin-core-common ---
+[INFO] surefireArgLine set to -javaagent:/Users/carolsong/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/Users/carolsong/kylin/core-common/../target/jacoco.exec,append=true
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ kylin-core-common ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:resources (default-resources) @ kylin-core-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ kylin-core-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-jamm) @ kylin-core-common ---
+[INFO] Configured Artifact: com.github.jbellis:jamm:?:jar
+[INFO] com.github.jbellis:jamm:0.3.1:jar already exists in /Users/carolsong/kylin/core-common/target/test-classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ kylin-core-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/carolsong/kylin/core-common/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ kylin-core-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ kylin-core-common ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.kylin.common.KylinConfigTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2022-09-28 03:04:50,235 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:50,427 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:50,449 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:50,468 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:50,616 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:50,618 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:50,619 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:50,619 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 2130606983
+2022-09-28 03:04:50,619 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:50,619 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testCreateInstanceFromUriThrowsRuntimeException
+2022-09-28 03:04:51,044 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.restclient.connection.default-max-per-route 20
+2022-09-28 03:04:51,046 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.restclient.connection.max-total 200
+2022-09-28 03:04:51,239 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,245 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,322 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:51,326 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,332 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,332 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,332 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:51,332 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,333 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 198438900
+2022-09-28 03:04:51,333 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:51,333 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testCreateInstanceFromUriThrowsIllegalStateExceptionOne
+2022-09-28 03:04:51,387 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,388 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,448 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:51,452 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,455 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,455 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,455 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:51,456 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,456 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1496631838
+2022-09-28 03:04:51,456 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:51,456 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testMRConfigOverride
+2022-09-28 03:04:51,458 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.engine.mr.config-override.test2
+2022-09-28 03:04:51,458 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.engine.mr.config-override.test1
+2022-09-28 03:04:51,492 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,492 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,558 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:51,561 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,562 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,562 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,563 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:51,563 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,563 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1198531054
+2022-09-28 03:04:51,563 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:51,563 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testThreadLocalOverride
+2022-09-28 03:04:51,563 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : meta1
+2022-09-28 03:04:51,564 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url meta1
+2022-09-28 03:04:51,583 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url kylin_metadata@hbase
+2022-09-28 03:04:51,584 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,584 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : meta2
+2022-09-28 03:04:51,584 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url meta2
+2022-09-28 03:04:51,585 WARN  [Thread-2] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url meta1
+2022-09-28 03:04:51,614 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,615 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,676 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:51,679 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,681 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,681 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,681 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:51,681 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,682 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1017203956
+2022-09-28 03:04:51,682 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:51,682 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testSetKylinConfigInEnvIfMissingTakingEmptyProperties
+2022-09-28 03:04:51,706 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,709 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,763 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:51,765 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,765 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,766 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,766 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:51,766 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,766 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1187053699
+2022-09-28 03:04:51,766 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:51,766 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testPropertiesHotLoad
+2022-09-28 03:04:51,766 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.storage.hbase.owner-tag whoami@kylin.apache.org
+2022-09-28 03:04:51,766 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,771 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,772 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,772 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,772 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.storage.hbase.owner-tag kylin@kylin.apache.org
+2022-09-28 03:04:51,799 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,800 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:51,851 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:51,853 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,854 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:51,855 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:51,855 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:51,856 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:51,856 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 2035215096
+2022-09-28 03:04:51,856 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:51,856 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testHdfsWorkingDir
+2022-09-28 03:04:52,066 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.hdfs-working-dir file:///tmp/kylin
+2022-09-28 03:04:52,391 WARN  [main] util.NativeCodeLoader:62 : Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-09-28 03:04:52,672 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-09-28 03:04:52,722 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:52,723 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:52,783 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:52,785 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:52,786 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:52,786 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:52,786 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:52,786 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:52,786 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 2057435918
+2022-09-28 03:04:52,786 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:52,786 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testExtShareTheBase
+2022-09-28 03:04:52,787 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with 1234 : 1234
+2022-09-28 03:04:52,789 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] 1234 1234
+2022-09-28 03:04:52,811 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:52,811 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:52,869 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:52,871 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:52,874 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:52,874 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:52,874 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:52,874 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:52,874 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1265935994
+2022-09-28 03:04:52,874 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:52,874 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testUnexpectedBlackInPro
+2022-09-28 03:04:52,878 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.engine.mr.config-override.test2
+2022-09-28 03:04:52,878 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.engine.mr.config-override.test1
+2022-09-28 03:04:52,904 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:52,908 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:52,971 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:52,976 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:52,978 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:52,978 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:52,979 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:52,979 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:52,979 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 992596844
+2022-09-28 03:04:52,979 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:52,979 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testGetMetadataUrlPrefix
+2022-09-28 03:04:52,979 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : testMetaPrefix@hbase
+2022-09-28 03:04:52,980 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url testMetaPrefix@hbase
+2022-09-28 03:04:52,980 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : testMetaPrefix@hdfs
+2022-09-28 03:04:52,980 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url testMetaPrefix@hdfs
+2022-09-28 03:04:52,981 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : /kylin/temp
+2022-09-28 03:04:52,981 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url /kylin/temp
+2022-09-28 03:04:53,018 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:53,020 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:53,117 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:53,119 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:53,122 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:53,123 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:53,123 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:53,123 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:53,123 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1666004025
+2022-09-28 03:04:53,123 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:53,123 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testBackwardCompatibility
+2022-09-28 03:04:53,124 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.test.bcc.old.key null
+2022-09-28 03:04:53,124 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.test.bcc.new.key some-value
+2022-09-28 03:04:53,124 WARN  [main] common.BackwardCompatibilityConfig:95 : Config 'kylin.test.bcc.old.key' is deprecated, use 'kylin.test.bcc.new.key' instead
+2022-09-28 03:04:53,125 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.test.bcc.old.key null
+2022-09-28 03:04:53,126 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.test.bcc.new.key some-value
+2022-09-28 03:04:53,126 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.test.bcc.old.key : 2
+2022-09-28 03:04:53,127 WARN  [main] common.BackwardCompatibilityConfig:95 : Config 'kylin.test.bcc.old.key' is deprecated, use 'kylin.test.bcc.new.key' instead
+2022-09-28 03:04:53,130 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.test.bcc.new.key 2
+2022-09-28 03:04:53,167 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:53,170 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:53,255 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:53,258 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:53,259 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:53,260 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:53,267 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:53,267 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:53,268 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1904811371
+2022-09-28 03:04:53,269 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:53,269 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testCalciteExtrasProperties
+2022-09-28 03:04:53,270 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.caseSensitive
+2022-09-28 03:04:53,271 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.conformance
+2022-09-28 03:04:53,271 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.unquotedCasing
+2022-09-28 03:04:53,271 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.quoting
+2022-09-28 03:04:53,271 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.query.calcite.extras-props.caseSensitive : false
+2022-09-28 03:04:53,271 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.query.calcite.extras-props.unquotedCasing : UNCHANGED
+2022-09-28 03:04:53,271 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.query.calcite.extras-props.quoting : BRACKET
+2022-09-28 03:04:53,271 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.query.calcite.extras-props.conformance : DEFAULT
+2022-09-28 03:04:53,276 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.caseSensitive
+2022-09-28 03:04:53,276 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.conformance
+2022-09-28 03:04:53,276 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.unquotedCasing
+2022-09-28 03:04:53,276 WARN  [main] common.KylinConfigBase:250 : [CTEST][GET-PARAM]: kylin.query.calcite.extras-props.quoting
+2022-09-28 03:04:53,310 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:53,312 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-09-28 03:04:53,368 INFO  [main] common.KylinConfig:119 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-09-28 03:04:53,370 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:53,371 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-09-28 03:04:53,372 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-09-28 03:04:53,373 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-09-28 03:04:53,373 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-09-28 03:04:53,373 INFO  [main] common.KylinConfig:162 : Initialized a new KylinConfig from getInstanceFromEnv : 1451361350
+2022-09-28 03:04:53,374 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-09-28 03:04:53,374 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+[TestName] testKylinConfigExt
+2022-09-28 03:04:53,404 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.576 s - in org.apache.kylin.common.KylinConfigTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-common ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.307 s
+[INFO] Finished at: 2022-09-27T22:04:54-05:00
+[INFO] ------------------------------------------------------------------------

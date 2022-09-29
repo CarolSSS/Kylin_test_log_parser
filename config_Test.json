@@ -1,0 +1,56 @@
+{
+  "org.apache.kylin.common.KylinConfigTest": {
+    "testCreateInstanceFromUriThrowsRuntimeException": [
+      "kylin.restclient.connection.max-total",
+      "kylin.metadata.url",
+      "kylin.restclient.connection.default-max-per-route"
+    ],
+    "testCreateInstanceFromUriThrowsIllegalStateExceptionOne": [
+      "kylin.metadata.url"
+    ],
+    "testMRConfigOverride": [
+      "kylin.engine.mr.config-override.test2",
+      "kylin.engine.mr.config-override.test1",
+      "kylin.metadata.url"
+    ],
+    "testThreadLocalOverride": [
+      "kylin.metadata.url"
+    ],
+    "testSetKylinConfigInEnvIfMissingTakingEmptyProperties": [
+      "kylin.metadata.url"
+    ],
+    "testPropertiesHotLoad": [
+      "kylin.metadata.url",
+      "kylin.storage.hbase.owner-tag"
+    ],
+    "testHdfsWorkingDir": [
+      "kylin.env.hdfs-working-dir",
+      "kylin.metadata.url"
+    ],
+    "testExtShareTheBase": [
+      "kylin.metadata.url",
+      "1234"
+    ],
+    "testUnexpectedBlackInPro": [
+      "kylin.engine.mr.config-override.test2",
+      "kylin.engine.mr.config-override.test1",
+      "kylin.metadata.url"
+    ],
+    "testGetMetadataUrlPrefix": [
+      "kylin.metadata.url"
+    ],
+    "testBackwardCompatibility": [
+      "kylin.test.bcc.new.key",
+      "kylin.metadata.url",
+      "kylin.test.bcc.old.key"
+    ],
+    "testCalciteExtrasProperties": [
+      "kylin.metadata.url",
+      "kylin.query.calcite.extras-props.unquotedCasing",
+      "kylin.query.calcite.extras-props.quoting",
+      "kylin.query.calcite.extras-props.conformance",
+      "kylin.query.calcite.extras-props.caseSensitive"
+    ],
+    "testKylinConfigExt": []
+  }
+}
