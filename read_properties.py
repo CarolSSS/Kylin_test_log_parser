@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 
+# Read properties from kylin default config
 df = pd.DataFrame(columns =['variable', 'value'])
 lines = open('data/kylin-defaults.properties', "r").readlines()
 for line in lines:

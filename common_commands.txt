@@ -1,102 +1,102 @@
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testNormal -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testNoRevision -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testToString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testCompare -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testMRConfigOverride -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testBackwardCompatibility -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testExtShareTheBase -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testPropertiesHotLoad -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testGetMetadataUrlPrefix -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testThreadLocalOverride -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testHdfsWorkingDir -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testUnexpectedBlackInPro -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testCalciteExtrasProperties -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testSetKylinConfigInEnvIfMissingTakingEmptyProperties -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsIllegalStateExceptionOne -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testBasic -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testNullInput -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testHDFS -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testEdgeCases -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testValueOfCache -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.QueryTraceTest#test -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testBuilderDefaults -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testGaugeReporting -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testCounterReporting -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testHistogramReporting -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testTimerReporting -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testMeterReporting -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#metrics2CycleIsNonDestructive -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#cachedMetricsAreClearedAfterCycle -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SourceConfigurationUtilTest#testHiveConf -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SourceConfigurationUtilTest#testSqoopConf -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#testxx -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#testyy -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#test0 -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#test1 -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#test3 -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#testStringSplit -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.DateFormatTest#testIsSupportedDateFormat -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ImplementationSwitchTest#test -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ImplementationSwitchTest#testException -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SortUtilTest#testExtractAndSort -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SSHClientTest#testCmd -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SSHClientTest#testScp -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.JacksonTest#foo -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testParameter -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testURI -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testHiveProperties -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testSparkConf -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.CaseInsensitiveStringCollectionTest#testCaseInsensitiveMap -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.CaseInsensitiveStringCollectionTest#testCaseInsensitiveSet -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RandomUtilTest#testRandomUUID -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.AutoReadWriteLockTest#testBasics -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.IdentityUtilTest#basicTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ToolUtilTest#testGetFirstIPV4NonLoopBackAddress -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringSplitterTest#testSplitReturningNonEmptyArray -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringSplitterTest#testSplitWithNonEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.MailServiceTest#testSendEmail -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#splitTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#splitAndTrimTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#splitByCommaTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoin -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testDropSuffixWithNonEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testDropSuffixWithEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testNoBlankWithNull -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testNoBlankWithNonEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testToUpperCaseArrayWithNonEmptyArray -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinReturningNonEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinOne -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinTwo -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinReturningNull -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testTrimSuffixWithEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testTrimSuffixWithNonEmptyString -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testFilterSystemArgsThrowsIllegalArgumentException -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testFilterSystemArgs -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#test -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#testBooleanArray -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#testWriteReadUnsignedInt -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#testReadable -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SumHelperTest#testSumDouble -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SumHelperTest#testSumIntegerReturningLongWhereShortValueIsPositive -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SumHelperTest#testSumLong -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.EncryptUtilTest#testNullInput -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.TimeUtilTest#basicTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.TimeUtilTest#basicTestWithTimeZone -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.CacheBuilderTest#foo -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeTest#extremeCase -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeTest#testClosed -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeTest#testOpen -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.PartialSorterTest#basicTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RandomSamplerTest#test -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeUtilTest#testFilter -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeUtilTest#testBuildRanges -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BitSetsTest#basicTest -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BitSetsTest#testValueOfWithNull -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest#test -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.HDFSResourceStoreTest#testListResourcesImpl -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.ResourceToolTest#testCopy -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.AutoDeleteDirectoryTest#testBasic -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testFileStore -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback -Dcheckstyle.skip=true
-mvn -pl core-common test -Dtest=org.apache.kylin.common.restclient.RestClientTest#basicTests -Dcheckstyle.skip=true
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testNormal -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinVersionTest#testNormal.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testNoRevision -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinVersionTest#testNoRevision.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testToString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinVersionTest#testToString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinVersionTest#testCompare -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinVersionTest#testCompare.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testMRConfigOverride -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testMRConfigOverride.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testBackwardCompatibility -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testBackwardCompatibility.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testExtShareTheBase -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testExtShareTheBase.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testPropertiesHotLoad -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testPropertiesHotLoad.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testGetMetadataUrlPrefix -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testGetMetadataUrlPrefix.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testThreadLocalOverride -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testThreadLocalOverride.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testHdfsWorkingDir -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testHdfsWorkingDir.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testUnexpectedBlackInPro -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testUnexpectedBlackInPro.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testCalciteExtrasProperties -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testCalciteExtrasProperties.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testSetKylinConfigInEnvIfMissingTakingEmptyProperties -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testSetKylinConfigInEnvIfMissingTakingEmptyProperties.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsIllegalStateExceptionOne -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsIllegalStateExceptionOne.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testBasic -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.StorageURLTest#testBasic.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testNullInput -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.StorageURLTest#testNullInput.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testHDFS -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.StorageURLTest#testHDFS.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testEdgeCases -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.StorageURLTest#testEdgeCases.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.StorageURLTest#testValueOfCache -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.StorageURLTest#testValueOfCache.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.QueryTraceTest#test -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.QueryTraceTest#test.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testBuilderDefaults -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testBuilderDefaults.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testGaugeReporting -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testGaugeReporting.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testCounterReporting -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testCounterReporting.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testHistogramReporting -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testHistogramReporting.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testTimerReporting -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testTimerReporting.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testMeterReporting -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#testMeterReporting.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#metrics2CycleIsNonDestructive -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#metrics2CycleIsNonDestructive.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#cachedMetricsAreClearedAfterCycle -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.metrics.metrics2.HadoopMetrics2ReporterTest#cachedMetricsAreClearedAfterCycle.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SourceConfigurationUtilTest#testHiveConf -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SourceConfigurationUtilTest#testHiveConf.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SourceConfigurationUtilTest#testSqoopConf -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SourceConfigurationUtilTest#testSqoopConf.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#testxx -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BasicTest#testxx.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#testyy -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BasicTest#testyy.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#test0 -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BasicTest#test0.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#test1 -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BasicTest#test1.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#test3 -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BasicTest#test3.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BasicTest#testStringSplit -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BasicTest#testStringSplit.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.DateFormatTest#testIsSupportedDateFormat -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.DateFormatTest#testIsSupportedDateFormat.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ImplementationSwitchTest#test -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ImplementationSwitchTest#test.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ImplementationSwitchTest#testException -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ImplementationSwitchTest#testException.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SortUtilTest#testExtractAndSort -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SortUtilTest#testExtractAndSort.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SSHClientTest#testCmd -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SSHClientTest#testCmd.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SSHClientTest#testScp -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SSHClientTest#testScp.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.JacksonTest#foo -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.JacksonTest#foo.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testParameter -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ParameterFilterTest#testParameter.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testURI -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ParameterFilterTest#testURI.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testHiveProperties -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ParameterFilterTest#testHiveProperties.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ParameterFilterTest#testSparkConf -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ParameterFilterTest#testSparkConf.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.CaseInsensitiveStringCollectionTest#testCaseInsensitiveMap -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.CaseInsensitiveStringCollectionTest#testCaseInsensitiveMap.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.CaseInsensitiveStringCollectionTest#testCaseInsensitiveSet -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.CaseInsensitiveStringCollectionTest#testCaseInsensitiveSet.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RandomUtilTest#testRandomUUID -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RandomUtilTest#testRandomUUID.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.AutoReadWriteLockTest#testBasics -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.AutoReadWriteLockTest#testBasics.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.IdentityUtilTest#basicTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.IdentityUtilTest#basicTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.ToolUtilTest#testGetFirstIPV4NonLoopBackAddress -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.ToolUtilTest#testGetFirstIPV4NonLoopBackAddress.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringSplitterTest#testSplitReturningNonEmptyArray -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringSplitterTest#testSplitReturningNonEmptyArray.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringSplitterTest#testSplitWithNonEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringSplitterTest#testSplitWithNonEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.MailServiceTest#testSendEmail -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.MailServiceTest#testSendEmail.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#splitTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#splitTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#splitAndTrimTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#splitAndTrimTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#splitByCommaTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#splitByCommaTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoin -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testJoin.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testDropSuffixWithNonEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testDropSuffixWithNonEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testDropSuffixWithEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testDropSuffixWithEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testNoBlankWithNull -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testNoBlankWithNull.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testNoBlankWithNonEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testNoBlankWithNonEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testToUpperCaseArrayWithNonEmptyArray -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testToUpperCaseArrayWithNonEmptyArray.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinReturningNonEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testJoinReturningNonEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinOne -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testJoinOne.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinTwo -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testJoinTwo.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testJoinReturningNull -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testJoinReturningNull.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testTrimSuffixWithEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testTrimSuffixWithEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testTrimSuffixWithNonEmptyString -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testTrimSuffixWithNonEmptyString.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testFilterSystemArgsThrowsIllegalArgumentException -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testFilterSystemArgsThrowsIllegalArgumentException.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.StringUtilTest#testFilterSystemArgs -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.StringUtilTest#testFilterSystemArgs.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#test -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BytesUtilTest#test.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#testBooleanArray -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BytesUtilTest#testBooleanArray.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#testWriteReadUnsignedInt -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BytesUtilTest#testWriteReadUnsignedInt.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BytesUtilTest#testReadable -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BytesUtilTest#testReadable.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SumHelperTest#testSumDouble -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SumHelperTest#testSumDouble.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SumHelperTest#testSumIntegerReturningLongWhereShortValueIsPositive -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SumHelperTest#testSumIntegerReturningLongWhereShortValueIsPositive.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.SumHelperTest#testSumLong -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.SumHelperTest#testSumLong.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.EncryptUtilTest#testNullInput -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.EncryptUtilTest#testNullInput.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.TimeUtilTest#basicTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.TimeUtilTest#basicTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.TimeUtilTest#basicTestWithTimeZone -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.TimeUtilTest#basicTestWithTimeZone.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.CacheBuilderTest#foo -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.CacheBuilderTest#foo.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeTest#extremeCase -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RangeTest#extremeCase.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeTest#testClosed -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RangeTest#testClosed.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeTest#testOpen -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RangeTest#testOpen.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.PartialSorterTest#basicTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.PartialSorterTest#basicTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RandomSamplerTest#test -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RandomSamplerTest#test.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeUtilTest#testFilter -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RangeUtilTest#testFilter.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.RangeUtilTest#testBuildRanges -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.RangeUtilTest#testBuildRanges.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BitSetsTest#basicTest -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BitSetsTest#basicTest.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.util.BitSetsTest#testValueOfWithNull -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.util.BitSetsTest#testValueOfWithNull.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest#test -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest#test.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.HDFSResourceStoreTest#testListResourcesImpl -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.persistence.HDFSResourceStoreTest#testListResourcesImpl.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.ResourceToolTest#testCopy -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.persistence.ResourceToolTest#testCopy.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.AutoDeleteDirectoryTest#testBasic -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.persistence.AutoDeleteDirectoryTest#testBasic.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testFileStore -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testFileStore.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback.log
+mvn -pl core-common test -Dtest=org.apache.kylin.common.restclient.RestClientTest#basicTests -Dcheckstyle.skip=true2>&1 | Tee ../Kylin_test_log_parser/common_logs/org.apache.kylin.common.restclient.RestClientTest#basicTests.log
