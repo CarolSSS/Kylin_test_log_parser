@@ -47,5 +47,5 @@ with open("common_commands.txt", "w") as output:
         row_slice = row[len("kylin.core-common.src.test.java."):]
         full_dir = "../" + "Kylin_test_log_parser" +"/"+"common_logs" +"/" + row_slice
         curr = "mvn -pl core-common test -Dtest=" + row_slice + " -Dcheckstyle.skip=true"
-        curr = curr + "2>&1 | Tee "+full_dir + ".log"
+        curr = curr + " 2>&1 | Tee "+full_dir + ".log"
         output.write(curr + '\n')
