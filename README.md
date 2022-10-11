@@ -4,4 +4,8 @@
 
 * Under development
 
-* Current stage: mapping one test get
+* Current stage: 
+    - `generate_all_tests.py` Implement function to generate all test commands into Kylin file
+    - `map_logs.py` Map the result from getters and setters in test log data into json file
+    - `read_properties.py` Read all properties
+    - `injection.py` Inject properties
