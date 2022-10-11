@@ -1,0 +1,263 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-core-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1115, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-metadata:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 51, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 65, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-query:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 144, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-soft-affinity-cache:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 62, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin:pom:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1115, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< org.apache.kylin:kylin-core-common >-----------------
+[INFO] Building Apache Kylin - Core Common 4.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[WARNING] Could not transfer metadata net.minidev:json-smart/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ kylin-core-common ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (check-style) @ kylin-core-common ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-test) @ kylin-core-common ---
+[INFO] surefireArgLine set to -javaagent:/Users/carolsong/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/Users/carolsong/kylin/core-common/../target/jacoco.exec,append=true
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ kylin-core-common ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:resources (default-resources) @ kylin-core-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ kylin-core-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-jamm) @ kylin-core-common ---
+[INFO] Configured Artifact: com.github.jbellis:jamm:?:jar
+[INFO] com.github.jbellis:jamm:0.3.1:jar already exists in /Users/carolsong/kylin/core-common/target/test-classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ kylin-core-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/carolsong/kylin/core-common/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ kylin-core-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ kylin-core-common ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.kylin.common.persistence.LocalFileResourceStoreTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2022-10-11 21:56:51,961 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-10-11 21:56:52,185 INFO  [main] common.KylinConfig:118 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-10-11 21:56:52,192 INFO  [main] common.KylinConfig:136 : [CTEST][LOAD-PARAM] Loading ctest.properties from /Users/carolsong/kylin/core-common/target/classes/ctest.properties
+2022-10-11 21:56:52,204 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-10-11 21:56:52,220 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-10-11 21:56:52,373 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-10-11 21:56:52,375 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-10-11 21:56:52,376 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-10-11 21:56:52,376 INFO  [main] common.KylinConfig:171 : Initialized a new KylinConfig from getInstanceFromEnv : 1901648626
+2022-10-11 21:56:52,376 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-10-11 21:56:52,376 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+2022-10-11 21:56:52,377 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,404 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,404 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-10-11 21:56:52,408 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,410 INFO  [main] persistence.ResourceStore:90 : Using metadata url ../examples/test_metadata/ for resource store
+2022-10-11 21:56:52,420 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,436 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,441 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,442 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,452 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,453 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,453 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,453 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,453 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,453 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,454 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,454 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,473 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,473 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,473 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,474 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,474 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,474 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,474 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,474 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,475 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,475 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,478 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,480 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,496 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,496 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,498 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,499 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,499 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,501 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,501 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,502 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,502 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,503 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,503 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-enabled false
+2022-10-11 21:56:52,503 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,503 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,503 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,504 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,504 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,504 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,559 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,559 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,560 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,561 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,562 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,562 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,585 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,586 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,586 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,587 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,587 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,587 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,588 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,588 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,588 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,617 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,618 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,621 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,621 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,621 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,623 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,623 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,625 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,625 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,627 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,628 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,628 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,632 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-enabled false
+2022-10-11 21:56:52,632 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,632 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,636 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,637 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,637 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,638 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,638 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,640 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,640 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,640 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,640 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,641 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,641 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,641 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,641 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,641 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,642 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,642 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,679 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,680 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,680 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,680 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,681 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,681 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,681 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,682 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,683 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,683 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,683 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,684 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,684 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,684 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,684 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,686 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,686 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,686 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,690 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,691 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,692 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,692 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,692 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,693 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,693 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,694 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,694 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,694 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,694 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,695 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,696 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,702 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,704 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,705 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,705 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,705 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,706 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,707 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,707 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,707 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,707 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,707 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,707 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,708 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,709 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,710 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-10-11 21:56:52,710 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-10-11 21:56:52,710 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:52,710 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-10-11 21:56:52,770 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.199 s - in org.apache.kylin.common.persistence.LocalFileResourceStoreTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-common ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.005 s
+[INFO] Finished at: 2022-10-11T16:56:53-05:00
+[INFO] ------------------------------------------------------------------------

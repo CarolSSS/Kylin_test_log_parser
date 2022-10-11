@@ -1,15 +1,17 @@
 import os
-from pickle import TRUE
 
 # Use bash common_commands to write all test logs to common_logs file
 all = os.walk("../kylin/core-common/src/test/java/org/apache/kylin/common")
+pre = len("../")
+suf = len(".java")
 all_tests = []
 match_dir = []
 THRESHOLD = len('Test.java')
 for x in all:
+    # print(x)
     testname = x[2]
     dir = x[0]
-    dir_cleaned = dir[3:].replace("/", ".") + "."
+    dir_cleaned = dir[pre:].replace("/", ".") + "."
     for i in testname:
         if len(i) - THRESHOLD < 0:
             continue
@@ -17,7 +19,7 @@ for x in all:
             continue
         else:
             match_dir.append(dir +"/"+ i)
-            fullName = dir_cleaned+i[:len(i) - 5]
+            fullName = dir_cleaned + i[:len(i) - suf]
             all_tests.append(fullName)
 
 all_names = []

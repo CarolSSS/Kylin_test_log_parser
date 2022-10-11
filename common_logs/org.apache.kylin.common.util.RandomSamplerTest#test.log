@@ -65,12 +65,13 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running org.apache.kylin.common.util.BasicTest
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.043 s - in org.apache.kylin.common.util.BasicTest
+[INFO] Running org.apache.kylin.common.util.RandomSamplerTest
+[789, 780, 60, 312, 731, 362, 912, 357, 700, 294, 398, 352, 69, 501, 767, 98, 399, 770, 185, 430, 810, 556, 366, 632, 81, 117, 983, 778, 466, 449, 773, 890, 790, 388, 464, 742, 121, 837, 676, 510, 112, 675, 132, 915, 44, 395, 746, 831, 305, 843]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 s - in org.apache.kylin.common.util.RandomSamplerTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-common ---
@@ -78,6 +79,6 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  11.659 s
-[INFO] Finished at: 2022-10-11T16:45:38-05:00
+[INFO] Total time:  8.646 s
+[INFO] Finished at: 2022-10-11T16:55:10-05:00
 [INFO] ------------------------------------------------------------------------

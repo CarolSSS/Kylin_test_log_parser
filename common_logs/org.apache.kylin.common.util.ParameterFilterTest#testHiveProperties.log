@@ -65,12 +65,20 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running org.apache.kylin.common.util.BasicTest
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.043 s - in org.apache.kylin.common.util.BasicTest
+[INFO] Running org.apache.kylin.common.util.ParameterFilterTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2022-10-11 21:47:52,362 WARN  [main] util.ParameterFilter:75 : Detected illegal character in command default;show tables by [ <>()$;\-#!+*"'/=%@]+ , replace it to defaultshowtables.
+2022-10-11 21:47:52,367 WARN  [main] util.ParameterFilter:75 : Detected illegal character in command default_kylin;drop tables; by [ <>()$;\-#!+*"'/=%@]+ , replace it to default_kylindroptables.
+2022-10-11 21:47:52,368 WARN  [main] util.ParameterFilter:75 : Detected illegal character in command db and 1=2 by [ <>()$;\-#!+*"'/=%@]+ , replace it to dband12.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.26 s - in org.apache.kylin.common.util.ParameterFilterTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-common ---
@@ -78,6 +86,6 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  11.659 s
-[INFO] Finished at: 2022-10-11T16:45:38-05:00
+[INFO] Total time:  8.489 s
+[INFO] Finished at: 2022-10-11T16:47:52-05:00
 [INFO] ------------------------------------------------------------------------

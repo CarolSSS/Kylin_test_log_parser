@@ -1,0 +1,112 @@
+{
+  "org.apache.kylin.common.persistence.ResourceToolTest#testCopy": [
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.common.util.SourceConfigurationUtilTest#testHiveConf": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException": [
+    "kylin.metadata.url",
+    "kylin.restclient.connection.default-max-per-route",
+    "kylin.restclient.connection.max-total"
+  ],
+  "org.apache.kylin.common.persistence.HDFSResourceStoreTest#testListResourcesImpl": [
+    "kylin.storage.project-isolation-enable",
+    "kylin.metadata.url",
+    "kylin.env.hdfs-working-dir"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testPropertiesHotLoad": [
+    "kylin.storage.hbase.owner-tag",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testCalciteExtrasProperties": [
+    "kylin.query.calcite.extras-props.unquotedCasing",
+    "kylin.query.calcite.extras-props.quoting",
+    "kylin.query.calcite.extras-props.caseSensitive",
+    "kylin.query.calcite.extras-props.conformance",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest#test": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.env.zookeeper-connect-string",
+    "kylin.server.host-address",
+    "kylin.env.zookeeper-base-path",
+    "kylin.server.cluster-name",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-is-local",
+    "kylin.server.mode"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testExtShareTheBase": [
+    "kylin.metadata.url",
+    "1234"
+  ],
+  "org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testFileStore": [
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.resourcestore.reconnect-enabled",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.common.util.SSHClientTest#testCmd": [
+    "kylin.job.use-remote-cli",
+    "kylin.job.remote-cli-username",
+    "kylin.job.remote-cli-password",
+    "kylin.job.remote-cli-port",
+    "kylin.job.remote-cli-hostname",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testHdfsWorkingDir": [
+    "kylin.metadata.url",
+    "kylin.env.hdfs-working-dir"
+  ],
+  "org.apache.kylin.common.restclient.RestClientTest#basicTests": [
+    "kylin.metadata.url",
+    "kylin.restclient.connection.default-max-per-route",
+    "kylin.restclient.connection.max-total"
+  ],
+  "org.apache.kylin.common.util.EncryptUtilTest#testNullInput": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testBackwardCompatibility": [
+    "kylin.test.bcc.new.key",
+    "kylin.metadata.url",
+    "kylin.test.bcc.old.key"
+  ],
+  "org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback": [
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testMRConfigOverride": [
+    "kylin.metadata.url",
+    "kylin.engine.mr.config-override.test1",
+    "kylin.engine.mr.config-override.test2"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testUnexpectedBlackInPro": [
+    "kylin.metadata.url",
+    "kylin.engine.mr.config-override.test1",
+    "kylin.engine.mr.config-override.test2"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testSetKylinConfigInEnvIfMissingTakingEmptyProperties": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsIllegalStateExceptionOne": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.util.SSHClientTest#testScp": [
+    "kylin.job.use-remote-cli",
+    "kylin.job.remote-cli-username",
+    "kylin.job.remote-cli-password",
+    "kylin.job.remote-cli-port",
+    "kylin.job.remote-cli-hostname",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testThreadLocalOverride": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.common.KylinConfigTest#testGetMetadataUrlPrefix": [
+    "kylin.metadata.url"
+  ]
+}

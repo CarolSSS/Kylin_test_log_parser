@@ -65,8 +65,8 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running org.apache.kylin.common.util.BasicTest
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.043 s - in org.apache.kylin.common.util.BasicTest
+[INFO] Running org.apache.kylin.common.util.MailServiceTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.023 s - in org.apache.kylin.common.util.MailServiceTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -78,6 +78,6 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  11.659 s
-[INFO] Finished at: 2022-10-11T16:45:38-05:00
+[INFO] Total time:  8.473 s
+[INFO] Finished at: 2022-10-11T16:49:33-05:00
 [INFO] ------------------------------------------------------------------------

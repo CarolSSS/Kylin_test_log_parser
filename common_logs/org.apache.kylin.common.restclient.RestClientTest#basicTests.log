@@ -65,12 +65,33 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running org.apache.kylin.common.util.BasicTest
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.043 s - in org.apache.kylin.common.util.BasicTest
+[INFO] Running org.apache.kylin.common.restclient.RestClientTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2022-10-11 21:57:13,943 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-10-11 21:57:14,142 INFO  [main] common.KylinConfig:118 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-10-11 21:57:14,148 INFO  [main] common.KylinConfig:136 : [CTEST][LOAD-PARAM] Loading ctest.properties from /Users/carolsong/kylin/core-common/target/classes/ctest.properties
+2022-10-11 21:57:14,161 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-10-11 21:57:14,174 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-10-11 21:57:14,415 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-10-11 21:57:14,419 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-10-11 21:57:14,420 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-10-11 21:57:14,420 INFO  [main] common.KylinConfig:171 : Initialized a new KylinConfig from getInstanceFromEnv : 138708980
+2022-10-11 21:57:14,420 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-10-11 21:57:14,420 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+2022-10-11 21:57:14,849 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.restclient.connection.default-max-per-route 20
+2022-10-11 21:57:14,850 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.restclient.connection.max-total 200
+2022-10-11 21:57:14,873 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.restclient.connection.default-max-per-route 20
+2022-10-11 21:57:14,874 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.restclient.connection.max-total 200
+2022-10-11 21:57:14,975 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.413 s - in org.apache.kylin.common.restclient.RestClientTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-common ---
@@ -78,6 +99,6 @@ Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-sma
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  11.659 s
-[INFO] Finished at: 2022-10-11T16:45:38-05:00
+[INFO] Total time:  9.389 s
+[INFO] Finished at: 2022-10-11T16:57:15-05:00
 [INFO] ------------------------------------------------------------------------

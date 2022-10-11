@@ -1,0 +1,155 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-core-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1115, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-metadata:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 51, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 65, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-query:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 144, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-soft-affinity-cache:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 62, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin:pom:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1115, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< org.apache.kylin:kylin-core-common >-----------------
+[INFO] Building Apache Kylin - Core Common 4.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[WARNING] Could not transfer metadata net.minidev:json-smart/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ kylin-core-common ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (check-style) @ kylin-core-common ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-test) @ kylin-core-common ---
+[INFO] surefireArgLine set to -javaagent:/Users/carolsong/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/Users/carolsong/kylin/core-common/../target/jacoco.exec,append=true
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ kylin-core-common ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:resources (default-resources) @ kylin-core-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ kylin-core-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-jamm) @ kylin-core-common ---
+[INFO] Configured Artifact: com.github.jbellis:jamm:?:jar
+[INFO] com.github.jbellis:jamm:0.3.1:jar already exists in /Users/carolsong/kylin/core-common/target/test-classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ kylin-core-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/carolsong/kylin/core-common/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ kylin-core-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ kylin-core-common ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2022-10-11 21:56:04,417 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-10-11 21:56:04,726 INFO  [main] common.KylinConfig:118 : Loading kylin-defaults.properties from /Users/carolsong/kylin/core-common/target/classes/kylin-defaults.properties
+2022-10-11 21:56:04,742 INFO  [main] common.KylinConfig:136 : [CTEST][LOAD-PARAM] Loading ctest.properties from /Users/carolsong/kylin/core-common/target/classes/ctest.properties
+2022-10-11 21:56:04,755 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-10-11 21:56:04,767 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-10-11 21:56:04,860 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-10-11 21:56:04,863 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-10-11 21:56:04,863 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-10-11 21:56:04,863 INFO  [main] common.KylinConfig:171 : Initialized a new KylinConfig from getInstanceFromEnv : 1260955583
+2022-10-11 21:56:04,863 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-10-11 21:56:04,863 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+2022-10-11 21:56:05,408 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-base-path /kylin
+2022-10-11 21:56:05,410 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:05,411 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-name ../examples/test_metadata/
+2022-10-11 21:56:05,411 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.server.cluster-name : ../examples/test_metadata/
+2022-10-11 21:56:05,453 INFO  [main] util.ZKUtil:181 : zookeeper connection string: 127.0.0.1:59450 with namespace /examples/test_metadata
+2022-10-11 21:56:05,570 INFO  [main] imps.CuratorFrameworkImpl:235 : Starting
+2022-10-11 21:56:05,607 INFO  [main] util.ZKUtil:185 : new zookeeper Client start: 127.0.0.1:59450
+2022-10-11 21:56:05,708 INFO  [main-EventThread] state.ConnectionStateManager:228 : State change: CONNECTED
+2022-10-11 21:56:05,738 INFO  [main] imps.CuratorFrameworkImpl:235 : Starting
+2022-10-11 21:56:05,745 INFO  [main-EventThread] state.ConnectionStateManager:228 : State change: CONNECTED
+2022-10-11 21:56:05,764 INFO  [Curator-Framework-0] imps.CuratorFrameworkImpl:821 : backgroundOperationsLoop exiting
+2022-10-11 21:56:05,801 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:05,802 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : ../examples/test_metadata/
+2022-10-11 21:56:05,804 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.server.host-address : localhost:1111
+2022-10-11 21:56:05,808 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-base-sleep-time 3000
+2022-10-11 21:56:05,809 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-max-retries 3
+2022-10-11 21:56:05,809 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-is-local false
+2022-10-11 21:56:05,810 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-is-local false
+2022-10-11 21:56:05,810 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-connect-string 127.0.0.1:59450
+2022-10-11 21:56:05,821 INFO  [main] util.ZKUtil:181 : zookeeper connection string: 127.0.0.1:59450 with namespace /examples/test_metadata
+2022-10-11 21:56:05,822 INFO  [main] imps.CuratorFrameworkImpl:235 : Starting
+2022-10-11 21:56:05,823 INFO  [main] util.ZKUtil:185 : new zookeeper Client start: 127.0.0.1:59450
+2022-10-11 21:56:05,827 INFO  [main-EventThread] state.ConnectionStateManager:228 : State change: CONNECTED
+2022-10-11 21:56:05,856 WARN  [main] utils.ZKPaths:76 : The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2022-10-11 21:56:05,888 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.host-address localhost:1111
+2022-10-11 21:56:05,891 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.mode query
+2022-10-11 21:56:06,146 INFO  [main] zookeeper.KylinServerDiscovery:126 : Haven't registered, waiting ...
+2022-10-11 21:56:06,198 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:100 : Service discovery get cacheChanged notification
+2022-10-11 21:56:06,211 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:108 : kylin.server.cluster-servers update to {localhost:1111=query}
+2022-10-11 21:56:06,232 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:115 : kylin.server.cluster-servers-with-mode update to localhost:1111:query
+2022-10-11 21:56:06,252 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-10-11 21:56:06,252 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : ../examples/test_metadata/
+2022-10-11 21:56:06,253 INFO  [main] common.KylinConfigBase:287 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.server.host-address : localhost:2222
+2022-10-11 21:56:06,253 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-base-sleep-time 3000
+2022-10-11 21:56:06,253 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-max-retries 3
+2022-10-11 21:56:06,254 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-is-local false
+2022-10-11 21:56:06,254 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-is-local false
+2022-10-11 21:56:06,254 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.env.zookeeper-connect-string 127.0.0.1:59450
+2022-10-11 21:56:06,290 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.host-address localhost:2222
+2022-10-11 21:56:06,291 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.mode query
+2022-10-11 21:56:06,302 INFO  [main] zookeeper.KylinServerDiscovery:126 : Haven't registered, waiting ...
+2022-10-11 21:56:06,305 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:100 : Service discovery get cacheChanged notification
+2022-10-11 21:56:06,305 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:100 : Service discovery get cacheChanged notification
+2022-10-11 21:56:06,305 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:108 : kylin.server.cluster-servers update to {localhost:2222=query, localhost:1111=query}
+2022-10-11 21:56:06,305 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:108 : kylin.server.cluster-servers update to {localhost:2222=query, localhost:1111=query}
+2022-10-11 21:56:06,306 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:115 : kylin.server.cluster-servers-with-mode update to localhost:2222:query,localhost:1111:query
+2022-10-11 21:56:06,306 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:115 : kylin.server.cluster-servers-with-mode update to localhost:2222:query,localhost:1111:query
+2022-10-11 21:56:06,519 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:100 : Service discovery get cacheChanged notification
+2022-10-11 21:56:06,520 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:108 : kylin.server.cluster-servers update to {localhost:2222=query}
+2022-10-11 21:56:06,520 INFO  [KylinServerTracker-0] zookeeper.KylinServerDiscovery:115 : kylin.server.cluster-servers-with-mode update to localhost:2222:query
+2022-10-11 21:56:06,525 INFO  [Curator-Framework-0] imps.CuratorFrameworkImpl:821 : backgroundOperationsLoop exiting
+2022-10-11 21:56:06,642 INFO  [main-EventThread] state.ConnectionStateManager:228 : State change: SUSPENDED
+2022-10-11 21:56:06,644 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.377 s - in org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest
+2022-10-11 21:56:06,732 INFO  [Thread-3] util.ZKUtil:79 : Going to remove 1 cached curator clients
+2022-10-11 21:56:06,784 INFO  [Thread-3] util.ZKUtil:64 : CuratorFramework for zkString 127.0.0.1:59450 is removed due to EXPLICIT
+2022-10-11 21:56:06,784 INFO  [Curator-Framework-0] imps.CuratorFrameworkImpl:821 : backgroundOperationsLoop exiting
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-common ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.124 s
+[INFO] Finished at: 2022-10-11T16:56:07-05:00
+[INFO] ------------------------------------------------------------------------
