@@ -10,10 +10,11 @@ suf = len(".log")
 def readFile(filname):
     lines = open("common_logs/" +filname, "r").readlines()
     all_params[filname] = set()
+    #SET
+    set_list = set()
     for line in lines:
         if "[CTEST][GET-PARAM]" in line:
             for ind, j in enumerate(line):
-                # print(line[ind:ind+len('[CTEST][GET-PARAM]')])
                 if line[ind:ind+len('[CTEST][GET-PARAM]')] == "[CTEST][GET-PARAM]":
                     start = ind+len('[CTEST][GET-PARAM] ')
             line2 = line[start:]
@@ -21,28 +22,53 @@ def readFile(filname):
             # print("=====")
             li = line2.split(' ')
             want = ''
+            
             if len(li) < 2:
                 want = li[0]
             if len(li) == 2:
                 want = li[0]
+            # print(want)
             if want[-1] == "\n":
                 want = want[:-1]
-            # print(want)
-            
+            # SET###
+            if want in set_list:
+                continue
+            ########
             curr = all_params[filname]
             curr.add(want)
             all_params[filname] = curr
-        
+
+        # SET
+        if "[CTEST][SET-PARAM]" in line:
+            for ind, j in enumerate(line):
+                if line[ind:ind+len('[CTEST][SET-PARAM]')] == "[CTEST][SET-PARAM]":
+                    start = ind+len('[CTEST][SET-PARAM] ')
+            line2 = line[start:]
+            line2 = line2.lstrip()
+            # print("=====")
+            li = line2.split(' ')
+            want = ''
+            if len(li) > 3:
+                want = li[-3]
+            else:
+                print("ERORR!!!Notice Here")
+                print(line2)
+                print("+++++++++++++++++++")
+                continue
+            if want[-1] == "\n":
+                want = want[:-1]
+            set_list.add(want)
+            print(set_list)
 
 all = os.walk("common_logs")
 all_files = [x[2] for x in all][0]
 for i in all_files:
-    print(i)
+    # print(i)
     if i[-3:] != "log":
         continue
     readFile(i)
 
-print(all_params)
+# print(all_params)
 
 new_dict_for_dump = {}
 for i in all_params.keys():
