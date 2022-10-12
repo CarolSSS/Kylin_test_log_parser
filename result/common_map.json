@@ -8,9 +8,9 @@
     "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException": [
+    "kylin.restclient.connection.max-total",
     "kylin.restclient.connection.default-max-per-route",
-    "kylin.metadata.url",
-    "kylin.restclient.connection.max-total"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.persistence.HDFSResourceStoreTest#testListResourcesImpl": [
     "kylin.metadata.url",
@@ -21,21 +21,21 @@
     "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testCalciteExtrasProperties": [
-    "kylin.query.calcite.extras-props.unquotedCasing",
-    "kylin.query.calcite.extras-props.quoting",
     "kylin.query.calcite.extras-props.caseSensitive",
-    "kylin.query.calcite.extras-props.conformance",
-    "kylin.metadata.url"
+    "kylin.query.calcite.extras-props.quoting",
+    "kylin.metadata.url",
+    "kylin.query.calcite.extras-props.unquotedCasing",
+    "kylin.query.calcite.extras-props.conformance"
   ],
   "org.apache.kylin.common.zookeeper.KylinServerDiscoveryTest#test": [
-    "kylin.server.mode",
+    "kylin.env.zookeeper-max-retries",
     "kylin.env.zookeeper-connect-string",
-    "kylin.server.cluster-name",
     "kylin.env.zookeeper-base-path",
     "kylin.env.zookeeper-base-sleep-time",
-    "kylin.env.zookeeper-is-local",
+    "kylin.server.cluster-name",
     "kylin.metadata.url",
-    "kylin.env.zookeeper-max-retries"
+    "kylin.env.zookeeper-is-local",
+    "kylin.server.mode"
   ],
   "org.apache.kylin.common.KylinConfigTest#testExtShareTheBase": [
     "kylin.metadata.url"
@@ -47,28 +47,28 @@
     "kylin.resourcestore.reconnect-max-ms"
   ],
   "org.apache.kylin.common.util.SSHClientTest#testCmd": [
+    "kylin.job.remote-cli-password",
     "kylin.job.remote-cli-username",
     "kylin.job.remote-cli-hostname",
-    "kylin.job.remote-cli-password",
+    "kylin.job.use-remote-cli",
     "kylin.job.remote-cli-port",
-    "kylin.metadata.url",
-    "kylin.job.use-remote-cli"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testHdfsWorkingDir": [
     "kylin.metadata.url"
   ],
   "org.apache.kylin.common.restclient.RestClientTest#basicTests": [
+    "kylin.restclient.connection.max-total",
     "kylin.restclient.connection.default-max-per-route",
-    "kylin.metadata.url",
-    "kylin.restclient.connection.max-total"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.util.EncryptUtilTest#testNullInput": [
     "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testBackwardCompatibility": [
-    "kylin.metadata.url",
+    "kylin.test.bcc.old.key",
     "kylin.test.bcc.new.key",
-    "kylin.test.bcc.old.key"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback": [
     "kylin.resourcestore.reconnect-base-ms",
@@ -76,14 +76,14 @@
     "kylin.resourcestore.reconnect-max-ms"
   ],
   "org.apache.kylin.common.KylinConfigTest#testMRConfigOverride": [
+    "kylin.engine.mr.config-override.test1",
     "kylin.engine.mr.config-override.test2",
-    "kylin.metadata.url",
-    "kylin.engine.mr.config-override.test1"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testUnexpectedBlackInPro": [
+    "kylin.engine.mr.config-override.test1",
     "kylin.engine.mr.config-override.test2",
-    "kylin.metadata.url",
-    "kylin.engine.mr.config-override.test1"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testSetKylinConfigInEnvIfMissingTakingEmptyProperties": [
     "kylin.metadata.url"
@@ -92,12 +92,12 @@
     "kylin.metadata.url"
   ],
   "org.apache.kylin.common.util.SSHClientTest#testScp": [
+    "kylin.job.remote-cli-password",
     "kylin.job.remote-cli-username",
     "kylin.job.remote-cli-hostname",
-    "kylin.job.remote-cli-password",
+    "kylin.job.use-remote-cli",
     "kylin.job.remote-cli-port",
-    "kylin.metadata.url",
-    "kylin.job.use-remote-cli"
+    "kylin.metadata.url"
   ],
   "org.apache.kylin.common.KylinConfigTest#testThreadLocalOverride": [
     "kylin.metadata.url"

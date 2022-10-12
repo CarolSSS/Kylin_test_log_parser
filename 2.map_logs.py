@@ -5,11 +5,15 @@ import json
 
 # Map log files from common_logs
 SUF_LEN = len(".log")
-COMMON_LOG_FILE = "common_logs/"
+COMMON_LOG_FILE = "common_logs"
+NAME = "common"
 
-def readFile(filname):
-    lines = open(COMMON_LOG_FILE +filname, "r").readlines()
-    all_params[filname] = set()
+# COMMON_LOG_FILE = "cube_logs"
+# NAME = "cube"
+
+def readFile(filename):
+    lines = open(COMMON_LOG_FILE + "/" + filename, "r").readlines()
+    all_params[filename] = set()
     #SET
     set_list = set()
     for line in lines:
@@ -34,9 +38,9 @@ def readFile(filname):
             if want in set_list:
                 continue
             ########
-            curr = all_params[filname]
+            curr = all_params[filename]
             curr.add(want)
-            all_params[filname] = curr
+            all_params[filename] = curr
 
         # SET
         if "[CTEST][SET-PARAM]" in line:
@@ -63,7 +67,7 @@ def readFile(filname):
 
 all_params = {}
 new_dict_for_dump = {}
-all = os.walk("common_logs")
+all = os.walk(COMMON_LOG_FILE)
 
 # Call read file
 all_files = [x[2] for x in all][0]
@@ -78,5 +82,5 @@ for i in all_params.keys():
         new_dict_for_dump[i[:-SUF_LEN]] = list(all_params[i])
 
 # Parse to json
-with open("result/map.json", "w") as outfile:
+with open("result/"+NAME+"_map.json", "w") as outfile:
     json.dump(new_dict_for_dump, outfile, indent=2)
