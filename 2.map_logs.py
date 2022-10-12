@@ -5,14 +5,14 @@ import json
 
 # Map log files from common_logs
 SUF_LEN = len(".log")
-COMMON_LOG_FILE = "common_logs"
+LOG = "common_logs"
 NAME = "common"
 
-# COMMON_LOG_FILE = "cube_logs"
+# LOG = "cube_logs"
 # NAME = "cube"
 
 def readFile(filename):
-    lines = open(COMMON_LOG_FILE + "/" + filename, "r").readlines()
+    lines = open(LOG + "/" + filename, "r").readlines()
     all_params[filename] = set()
     #SET
     set_list = set()
@@ -67,7 +67,7 @@ def readFile(filename):
 
 all_params = {}
 new_dict_for_dump = {}
-all = os.walk(COMMON_LOG_FILE)
+all = os.walk(LOG)
 
 # Call read file
 all_files = [x[2] for x in all][0]

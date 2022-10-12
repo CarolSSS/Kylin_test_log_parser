@@ -1,0 +1,271 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-core-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1115, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-metadata:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 51, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 65, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-query:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 144, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-soft-affinity-cache:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 62, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin:pom:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1115, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.kylin:kylin-core-cube >------------------
+[INFO] Building Apache Kylin - Core Cube 4.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/apache/kylin/kylin-core-metadata/4.0.3-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata org.apache.kylin:kylin-core-metadata:4.0.3-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/kylin/kylin-core-metadata/4.0.3-SNAPSHOT/maven-metadata.xml
+[WARNING] org.apache.kylin:kylin-core-metadata:4.0.3-SNAPSHOT/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.kylin:kylin-core-metadata:4.0.3-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/kylin/kylin-core-metadata/4.0.3-SNAPSHOT/maven-metadata.xml
+Downloading from maven-default-http-blocker: http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[WARNING] Could not transfer metadata net.minidev:json-smart/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/net/minidev/json-smart/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ kylin-core-cube ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (check-style) @ kylin-core-cube ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-test) @ kylin-core-cube ---
+[INFO] surefireArgLine set to -javaagent:/Users/carolsong/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/Users/carolsong/kylin/core-cube/../target/jacoco.exec,append=true
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ kylin-core-cube ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:resources (default-resources) @ kylin-core-cube ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/carolsong/kylin/core-cube/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ kylin-core-cube ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-jamm) @ kylin-core-cube ---
+[INFO] Configured Artifact: com.github.jbellis:jamm:?:jar
+[INFO] com.github.jbellis:jamm:0.3.1:jar already exists in /Users/carolsong/kylin/core-cube/target/test-classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ kylin-core-cube ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ kylin-core-cube ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ kylin-core-cube ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.kylin.cube.cuboid.TreeCuboidSchedulerTest
+|---- Cuboid 1111111111(1023)
+    |---- Cuboid 1111111110(1022)
+        |---- Cuboid 1101011100(860)
+        |---- Cuboid 1101010110(854)
+            |---- Cuboid 0101010010(338)
+        |---- Cuboid 1100011010(794)
+            |---- Cuboid 1100001000(776)
+            |---- Cuboid 1000011010(538)
+        |---- Cuboid 1011111010(762)
+            |---- Cuboid 1011110000(752)
+                |---- Cuboid 1011100000(736)
+                    |---- Cuboid 1010100000(672)
+            |---- Cuboid 1011101010(746)
+        |---- Cuboid 1011011110(734)
+    |---- Cuboid 1111101111(1007)
+        |---- Cuboid 1111101010(1002)
+        |---- Cuboid 1111000111(967)
+            |---- Cuboid 1111000100(964)
+                |---- Cuboid 1101000100(836)
+            |---- Cuboid 1111000010(962)
+                |---- Cuboid 1101000010(834)
+            |---- Cuboid 1011000011(707)
+                |---- Cuboid 1011000001(705)
+        |---- Cuboid 1110100011(931)
+            |---- Cuboid 1110100010(930)
+            |---- Cuboid 1110100001(929)
+        |---- Cuboid 1110001111(911)
+            |---- Cuboid 1010000111(647)
+                |---- Cuboid 1010000100(644)
+        |---- Cuboid 1101101101(877)
+            |---- Cuboid 1101100101(869)
+        |---- Cuboid 1101101011(875)
+            |---- Cuboid 1100101010(810)
+            |---- Cuboid 1001001011(587)
+        |---- Cuboid 1100100111(807)
+            |---- Cuboid 1100100101(805)
+            |---- Cuboid 1100100011(803)
+            |---- Cuboid 1100000110(774)
+                |---- Cuboid 1100000010(770)
+                    |---- Cuboid 1100000000(768)
+                |---- Cuboid 0100000110(262)
+    |---- Cuboid 1111010101(981)
+        |---- Cuboid 1111010001(977)
+        |---- Cuboid 1010010101(661)
+    |---- Cuboid 1110111101(957)
+        |---- Cuboid 1110111001(953)
+            |---- Cuboid 0110111001(441)
+                |---- Cuboid 0110101001(425)
+                    |---- Cuboid 0100101001(297)
+                        |---- Cuboid 0100101000(296)
+                    |---- Cuboid 0010101001(169)
+        |---- Cuboid 1110101100(940)
+            |---- Cuboid 1110001100(908)
+            |---- Cuboid 0110100100(420)
+    |---- Cuboid 1110010011(915)
+        |---- Cuboid 1110000011(899)
+            |---- Cuboid 0110000011(387)
+    |---- Cuboid 1101110101(885)
+        |---- Cuboid 1101010101(853)
+            |---- Cuboid 1100010100(788)
+            |---- Cuboid 0101010001(337)
+                |---- Cuboid 0100010001(273)
+        |---- Cuboid 1001110101(629)
+            |---- Cuboid 1001010001(593)
+                |---- Cuboid 1001010000(592)
+                |---- Cuboid 1001000001(577)
+    |---- Cuboid 1101110011(883)
+        |---- Cuboid 1101110000(880)
+    |---- Cuboid 1011111101(765)
+        |---- Cuboid 1011101101(749)
+            |---- Cuboid 1011001001(713)
+                |---- Cuboid 1011001000(712)
+            |---- Cuboid 1001101100(620)
+            |---- Cuboid 1001001101(589)
+                |---- Cuboid 1001001100(588)
+        |---- Cuboid 1001111001(633)
+        |---- Cuboid 1000111101(573)
+            |---- Cuboid 1000111100(572)
+                |---- Cuboid 1000110100(564)
+                |---- Cuboid 1000101100(556)
+                    |---- Cuboid 1000100100(548)
+            |---- Cuboid 1000111001(569)
+                |---- Cuboid 1000111000(568)
+                |---- Cuboid 1000011001(537)
+        |---- Cuboid 0011111101(253)
+            |---- Cuboid 0011111100(252)
+                |---- Cuboid 0011100100(228)
+                    |---- Cuboid 0001100100(100)
+                |---- Cuboid 0001111100(124)
+            |---- Cuboid 0011011101(221)
+                |---- Cuboid 0001011101(93)
+            |---- Cuboid 0010111101(189)
+                |---- Cuboid 0000111101(61)
+                    |---- Cuboid 0000111001(57)
+                        |---- Cuboid 0000111000(56)
+                            |---- Cuboid 0000110000(48)
+                            |---- Cuboid 0000101000(40)
+                            |---- Cuboid 0000011000(24)
+    |---- Cuboid 1011110111(759)
+        |---- Cuboid 1010110100(692)
+        |---- Cuboid 1001100111(615)
+            |---- Cuboid 1001100011(611)
+            |---- Cuboid 1001000110(582)
+    |---- Cuboid 1010111011(699)
+        |---- Cuboid 1010110011(691)
+        |---- Cuboid 1010011001(665)
+        |---- Cuboid 1000101011(555)
+            |---- Cuboid 1000100001(545)
+        |---- Cuboid 0010111011(187)
+            |---- Cuboid 0010110001(177)
+                |---- Cuboid 0010110000(176)
+                    |---- Cuboid 0010100000(160)
+    |---- Cuboid 1000011111(543)
+        |---- Cuboid 1000010110(534)
+            |---- Cuboid 1000010100(532)
+        |---- Cuboid 1000010011(531)
+        |---- Cuboid 0000011111(31)
+            |---- Cuboid 0000010101(21)
+                |---- Cuboid 0000010001(17)
+    |---- Cuboid 0111111111(511)
+        |---- Cuboid 0111110111(503)
+            |---- Cuboid 0111110011(499)
+                |---- Cuboid 0001110011(115)
+                    |---- Cuboid 0001110000(112)
+            |---- Cuboid 0100110111(311)
+                |---- Cuboid 0100100111(295)
+                    |---- Cuboid 0000100111(39)
+                        |---- Cuboid 0000100110(38)
+                        |---- Cuboid 0000100101(37)
+                            |---- Cuboid 0000100100(36)
+                            |---- Cuboid 0000100001(33)
+                        |---- Cuboid 0000000111(7)
+        |---- Cuboid 0111101101(493)
+            |---- Cuboid 0111101000(488)
+                |---- Cuboid 0111001000(456)
+                    |---- Cuboid 0110001000(392)
+        |---- Cuboid 0111011101(477)
+        |---- Cuboid 0110111110(446)
+            |---- Cuboid 0110110010(434)
+            |---- Cuboid 0110101010(426)
+            |---- Cuboid 0100111010(314)
+                |---- Cuboid 0100111000(312)
+                |---- Cuboid 0100110010(306)
+        |---- Cuboid 0110011111(415)
+            |---- Cuboid 0110011011(411)
+                |---- Cuboid 0110011001(409)
+                |---- Cuboid 0100011011(283)
+                    |---- Cuboid 0100011010(282)
+            |---- Cuboid 0110010100(404)
+                |---- Cuboid 0100010100(276)
+        |---- Cuboid 0101101111(367)
+            |---- Cuboid 0101101101(365)
+                |---- Cuboid 0101101100(364)
+            |---- Cuboid 0101100110(358)
+                |---- Cuboid 0101100100(356)
+                    |---- Cuboid 0100100100(292)
+            |---- Cuboid 0101100011(355)
+        |---- Cuboid 0101011111(351)
+            |---- Cuboid 0101001111(335)
+                |---- Cuboid 0101001001(329)
+                    |---- Cuboid 0101000000(320)
+                        |---- Cuboid 0001000000(64)
+            |---- Cuboid 0100011110(286)
+        |---- Cuboid 0011111110(254)
+            |---- Cuboid 0011111010(250)
+                |---- Cuboid 0011111000(248)
+                |---- Cuboid 0011010010(210)
+            |---- Cuboid 0011001110(206)
+                |---- Cuboid 0011001100(204)
+                    |---- Cuboid 0011001000(200)
+                |---- Cuboid 0001001110(78)
+                    |---- Cuboid 0000001110(14)
+            |---- Cuboid 0010011110(158)
+                |---- Cuboid 0010011000(152)
+                |---- Cuboid 0010010110(150)
+        |---- Cuboid 0011101011(235)
+            |---- Cuboid 0011100010(226)
+            |---- Cuboid 0001101011(107)
+                |---- Cuboid 0001101001(105)
+                    |---- Cuboid 0001001001(73)
+                |---- Cuboid 0001100011(99)
+        |---- Cuboid 0010101111(175)
+            |---- Cuboid 0010100110(166)
+            |---- Cuboid 0010001101(141)
+                |---- Cuboid 0010000101(133)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.35 s - in org.apache.kylin.cube.cuboid.TreeCuboidSchedulerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-cube ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.931 s
+[INFO] Finished at: 2022-10-11T21:33:14-05:00
+[INFO] ------------------------------------------------------------------------
