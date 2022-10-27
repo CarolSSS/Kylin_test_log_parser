@@ -9,3 +9,6 @@
     - `map_logs.py` Map the result from getters and setters in test log data into json file
     - `read_properties.py` Read all properties
     - `injection.py` Inject properties
+
+* TODO:
+    - Add a function that reads in all the default property value received by get, to aid trying different value in future.
