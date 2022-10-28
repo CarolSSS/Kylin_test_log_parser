@@ -1,0 +1,88 @@
+{
+  "kylin.metadata.url": [
+    ""
+  ],
+  "kylin.resourcestore.reconnect-base-ms": [
+    "1000"
+  ],
+  "kylin.resourcestore.reconnect-max-ms": [
+    "60000"
+  ],
+  "kylin.restclient.connection.default-max-per-route": [
+    "20"
+  ],
+  "kylin.restclient.connection.max-total": [
+    "200"
+  ],
+  "kylin.storage.project-isolation-enable": [
+    "true"
+  ],
+  "kylin.storage.hbase.owner-tag": [
+    "kylin@kylin.apache.org",
+    "whoami@kylin.apache.org"
+  ],
+  "kylin.query.calcite.extras-props.caseSensitive": [
+    ""
+  ],
+  "kylin.query.calcite.extras-props.conformance": [
+    ""
+  ],
+  "kylin.query.calcite.extras-props.unquotedCasing": [
+    ""
+  ],
+  "kylin.query.calcite.extras-props.quoting": [
+    ""
+  ],
+  "kylin.env.zookeeper-base-path": [
+    "/kylin"
+  ],
+  "kylin.server.cluster-name": [
+    "../examples/test_metadata/"
+  ],
+  "kylin.env.zookeeper-base-sleep-time": [
+    "3000"
+  ],
+  "kylin.env.zookeeper-max-retries": [
+    "3"
+  ],
+  "kylin.env.zookeeper-is-local": [
+    "false"
+  ],
+  "kylin.env.zookeeper-connect-string": [
+    "127.0.0.1:59450"
+  ],
+  "kylin.server.mode": [
+    "query"
+  ],
+  "kylin.resourcestore.reconnect-enabled": [
+    "false"
+  ],
+  "kylin.job.use-remote-cli": [
+    "false"
+  ],
+  "kylin.job.remote-cli-port": [
+    "22"
+  ],
+  "kylin.job.remote-cli-hostname": [
+    ""
+  ],
+  "kylin.job.remote-cli-username": [
+    ""
+  ],
+  "kylin.job.remote-cli-password": [
+    ""
+  ],
+  "kylin.test.bcc.old.key": [
+    "null"
+  ],
+  "kylin.test.bcc.new.key": [
+    "some-value",
+    "2"
+  ],
+  "kylin.engine.mr.config-override.test2": [
+    ""
+  ],
+  "kylin.engine.mr.config-override.test1": [
+    ""
+  ]
+}
