@@ -5,8 +5,8 @@ import json
 
 # Map log files from common_logs
 SUF_LEN = len(".log")
-LOG = "common_logs"
-NAME = "common"
+LOG = "cube_logs"
+NAME = "cube"
 
 all_value = dict()
 # LOG = "cube_logs"
@@ -26,7 +26,7 @@ def readFile(filename, all_value):
             line2 = line2.lstrip()
             # print("=====")
             li = line2.split(' ', 1)
-            print(line2)
+            # print(line2)
             want = ''
             value = ''
             if len(li) <= 2:
@@ -86,7 +86,7 @@ for i in all_files:
         continue
     readFile(i, all_value)
 
-print(all_value)
+# print(all_value)
 
 # Clean result dictionary and eliminate tests with no configuration parameter called
 for i in all_params.keys():
