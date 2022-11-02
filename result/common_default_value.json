@@ -1,6 +1,6 @@
 {
   "kylin.metadata.url": [
-    ""
+    "kylin_metadata@hbase"
   ],
   "kylin.resourcestore.reconnect-base-ms": [
     "1000"
@@ -22,16 +22,20 @@
     "whoami@kylin.apache.org"
   ],
   "kylin.query.calcite.extras-props.caseSensitive": [
-    ""
+    "true"
   ],
   "kylin.query.calcite.extras-props.conformance": [
-    ""
+    "LENIENT"
   ],
   "kylin.query.calcite.extras-props.unquotedCasing": [
-    ""
+    "UNCHANGED",
+    "TO_UPPER",
+    "TO_LOWER"
   ],
   "kylin.query.calcite.extras-props.quoting": [
-    ""
+    "DOUBLE_QUOTE",
+    "BACK_TICK",
+    "BRACKET"
   ],
   "kylin.env.zookeeper-base-path": [
     "/kylin"
