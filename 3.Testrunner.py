@@ -11,25 +11,21 @@ sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 # TODO
 # finished file gnerate function
 # finish run all test function
+
+
 def file_generate(file_path):
     file_path = './result/common_map.json'
-    json_file = open(file_path)  # param_unset_getter_map path
+    module_name = "common"
+    json_file = open(file_path)
     para_map = json.load(json_file)
-    csvoutput = []
-    # my_para = para_map[test_name]
-    for test_name in para_map:
-        for i in para_map[test_name]:
-
-            csvoutput.append()
-
-
-    # data = {}
-    # for i in my_para:
-    #     data[i] = [[], []]
-    # with open("./result/" + test_name + '.csv', 'w') as fp:
-    #     header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
-    #     fp.write("%s\n" % header)
-    pass
+    csv_output = []
+    with open("./config_result/" + module_name + '.csv', 'w') as fp:
+        header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
+        fp.write("%s\n" % header)
+        for test_name in para_map:
+            for i in para_map[test_name]:
+                output = git_link + ", " + sha + ", " + i + ", " + test_name + ", " + " " + ", " + "GOOD"
+                fp.write("%s\n" % output)
 
 
 def run_ctest(module_name, test_name, config_parameter, config_value):
@@ -56,7 +52,7 @@ def file_is_exist(test_name):
     return my_file.exists()
 
 
-def run_all_ctest(git_link, sha, test_name, module_name):
+def run_all_ctest(test_name, module_name):
     csv_output = []
     # need to change to csv files
     # finished the file generate first
