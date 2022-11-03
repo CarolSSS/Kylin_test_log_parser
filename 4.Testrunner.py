@@ -5,12 +5,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import datetime
-import csv
+
 # to
 ctest_file = "../kylin/core-common/src/main/resources/ctest.properties"
 working_dir = "../kylin"
 git_link = "https://github.com/apache/kylin"
 sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
+
 
 # TODO
 # finished file gnerate function
@@ -45,9 +46,9 @@ def run_ctest(module_name, test_name, config_parameter, config_value):
         else:
             result = "FAIL"
     if result == "PASS":
-        print("[myctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[32m"+result+"\033[0m")
+        print("[myctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[32m" + result + "\033[0m")
     elif result == "FAIL":
-        print("[myctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[31m"+result+"\033[0m")
+        print("[myctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[31m" + result + "\033[0m")
     return result
 
 
@@ -62,26 +63,25 @@ def run_all_ctest(module_name):
     csv_output = []
     file = 'config_result/generated_{}_vals.csv'.format(module_name)
     df = pd.read_csv(file, sep=',', engine='python')
-    # print(df.columns)
+    df = df.fillna(value=" ")
     idx = 0.0
-    for index, row in df.iterrows():
-        row["EXPECTATION(PASS|FAIL)"] = "FAIL"
-        test_name = row["TEST_NAME"]
-        config_parameter = row["CONFIG_PARAMETER"]
-        config_value = row["VALUE"]
-        result = run_ctest(module_name, test_name, config_parameter, config_value)
-        csv_output.append(git_link + ", " + sha + ", " + config_parameter + ", " + test_name + ", " + config_value +
-                          ", " + row["TYPE(GOOD|BAD)"] + ", " + result)
-        progress = float(idx / len(df)) * 100
-        print("[myctest]--> current is " + str(idx) + " test, " + str(progress) + "% finished.")
-        idx = idx + 1
-
     print("")
-    file_name = module_name + str(datetime.date.today()) + ".csv"
+    file_name = 'config_result/' + module_name + str(datetime.date.today()) + ".csv"
     with open(file_name, 'w+') as fp:
         header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
         fp.write("%s\n" % header)
-        for lines in csv_output:
+        for index, row in df.iterrows():
+            row["EXPECTATION(PASS|FAIL)"] = "FAIL"
+            test_name = row["TEST_NAME"]
+            config_parameter = row["CONFIG_PARAMETER"]
+            config_value = row["VALUE"]
+            result = run_ctest(module_name, test_name, config_parameter, config_value)
+            lines = git_link + ", " + sha + ", " + config_parameter + ", " + test_name + ", " + \
+                    config_value + ", " + row["TYPE(GOOD|BAD)"] + ", " + result
+            csv_output.append(lines)
+            progress = float(idx / len(df)) * 100
+            print("[myctest]--> current is " + str(idx) + " test, " + str(progress) + "% finished.")
+            idx = idx + 1
             fp.write("%s\n" % lines)
         print('Done')
 
@@ -91,7 +91,7 @@ def inject(name, config_value):
         config_value = " "
     with open(ctest_file, 'w') as fp:
         print("ctest file at : " + ctest_file)
-        print("inject parameter: " + name + " = " + config_value)
+        print("inject parameter: " + name + " = " + str(config_value))
         fp.write(name + " =" + config_value)
 
 
