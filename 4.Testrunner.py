@@ -1,6 +1,10 @@
 import os
 import json
 from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import datetime
 import csv
 # to
 ctest_file = "../kylin/core-common/src/main/resources/ctest.properties"
@@ -15,7 +19,7 @@ sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 
 def file_generate(file_path):
     file_path = './result/common_map.json'
-    module_name = "common"
+    module_name = "core-common"
     json_file = open(file_path)
     para_map = json.load(json_file)
     csv_output = []
@@ -52,23 +56,28 @@ def file_is_exist(test_name):
     return my_file.exists()
 
 
-def run_all_ctest(test_name, module_name):
-    csv_output = []
+def run_all_ctest(module_name):
     # need to change to csv files
     # finished the file generate first
-    with open(test_name + '.json') as json_file:
-        test_dict = json.load(json_file)
-    for i in test_dict:
-        config_parameter = i
-        for j in range(len(test_dict[i][0])):
-            config_value = test_dict[i][0][j]
-            types = test_dict[i][1][j]
-            result = run_ctest(module_name, test_name, config_parameter, value, )
-            csv_output.append(git_link + ", " + sha + ", " + config_parameter + ", " + test_name + ", " + config_value +
-                              ", " + types + ", " + result)
+    csv_output = []
+    file = 'config_result/generated_{}_vals.csv'.format(module_name)
+    df = pd.read_csv(file, sep=',', engine='python')
+    # print(df.columns)
+    idx = 0.0
+    for index, row in df.iterrows():
+        row["EXPECTATION(PASS|FAIL)"] = "FAIL"
+        test_name = row["TEST_NAME"]
+        config_parameter = row["CONFIG_PARAMETER"]
+        config_value = row["VALUE"]
+        result = run_ctest(module_name, test_name, config_parameter, config_value)
+        csv_output.append(git_link + ", " + sha + ", " + config_parameter + ", " + test_name + ", " + config_value +
+                          ", " + row["TYPE(GOOD|BAD)"] + ", " + result)
+        progress = float(idx / len(df)) * 100
+        print("[myctest]--> current is " + str(idx) + " test, " + str(progress) + "% finished.")
+        idx = idx + 1
+
     print("")
-    os.chdir('../../utils')  # result dir
-    file_name = test_name + ".csv"
+    file_name = module_name + str(datetime.date.today()) + ".csv"
     with open(file_name, 'w+') as fp:
         header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
         fp.write("%s\n" % header)
@@ -78,6 +87,8 @@ def run_all_ctest(test_name, module_name):
 
 
 def inject(name, config_value):
+    if str(config_value) == "nan":
+        config_value = " "
     with open(ctest_file, 'w') as fp:
         print("ctest file at : " + ctest_file)
         print("inject parameter: " + name + " = " + config_value)
@@ -94,7 +105,13 @@ def delete():
 if __name__ == "__main__":
     # module = "core-common"
     # testName = "KylinServerDiscoveryTest#test"
-    # param = "kylin.env.zookeeper-base-sleep-time"
-    # value = "5555"
+    param = "kylin.job.remote-cli-password"
+    # value = ""
     # run_ctest(module, testName, param, value)
-    file_generate("1")
+    # file_generate("1")
+    run_all_ctest("core-common")
+    # my_file = 'config_result/generated_core-common_vals.csv'
+    # mydf = pd.read_csv(my_file, sep=',', engine='python')
+    # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)
+    # print(value)
+    # inject(param, np.NaN)

@@ -90,7 +90,7 @@ for i in all_generate.keys():
             # print(k)
             curr['VALUE'] = k[0]
             curr['TYPE(GOOD|BAD)'] = k[1]
-            new_df = pd.concat([new_df, pd.DataFrame(curr).T], axis = 0, ignore_index= True)
+            new_df = pd.concat([new_df, pd.DataFrame(curr).T], axis=0, ignore_index= True)
             # print(new_df)
 
 new_df.to_csv('config_result/generated_{}_vals.csv'.format(MODULE))
