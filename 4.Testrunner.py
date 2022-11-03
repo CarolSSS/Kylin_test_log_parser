@@ -66,7 +66,7 @@ def run_all_ctest(module_name):
     df = df.fillna(value=" ")
     idx = 0.0
     print("")
-    file_name = 'config_result/' + module_name + str(datetime.date.today()) + ".csv"
+    file_name = 'config_result/' + module_name + ".csv"
     with open(file_name, 'w+') as fp:
         header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
         fp.write("%s\n" % header)
