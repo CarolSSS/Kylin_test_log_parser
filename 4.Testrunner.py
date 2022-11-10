@@ -1,6 +1,8 @@
 import os
 import json
 from pathlib import Path
+
+import numpy as np
 import pandas as pd
 import sys
 import os.path
@@ -20,36 +22,34 @@ sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 
 
 def file_generate(module_name):
-    # implement auto_generate
-    file_path = './result/common_map.json'
+    file_path = './result/{}_map.json'.format(module_name)
     json_file = open(file_path)
     para_map = json.load(json_file)
-    csv_output = []
-    with open("./config_result/" + module_name + '.csv', 'w') as fp:
-        header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
-        fp.write("%s\n" % header)
-        for test_name in para_map:
-            for i in para_map[test_name]:
-                output = git_link + ", " + sha + ", " + i + ", " + test_name + ", " + " " + ", " + "GOOD"
-                fp.write("%s\n" % output)
+    db = []
+    header = ["REPO", "SHA", "CONFIG_PARAMETER", "TEST_NAME", "VALUE", "TYPE(GOOD|BAD)", "EXPECTATION(PASS|FAIL)"]
+    for test_name in para_map:
+        for i in para_map[test_name]:
+            output = [git_link, sha,  i,   test_name,  "  ", " ", " "]
+            db.append(output)
+    db = pd.DataFrame(db, columns=header)
+    return db
 
 
 def run_ctest(module_name, test_name, config_parameter, config_value):
     inject(config_parameter, config_value)
     command = "mvn -pl core-" + module_name + " test -Dtest=" + test_name
-    print(command)
     os.chdir(working_dir)
-    print("change dir to " + working_dir)
-    print("run command : " + command)
+    print("[ctest]--> change dir to " + working_dir)
+    print("[ctest]--> run command : " + command)
     with os.popen(command) as output:
         if "[INFO] BUILD SUCCESS\n" in output.readlines():
             result = "PASS"
         else:
             result = "FAIL"
     if result == "PASS":
-        print("[myctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[32m" + result + "\033[0m")
+        print("[ctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[32m" + result + "\033[0m")
     elif result == "FAIL":
-        print("[myctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[31m" + result + "\033[0m")
+        print("[ctest]--> " + config_parameter + " " + config_value + " " + " " + "\033[31m" + result + "\033[0m")
     return result
 
 
@@ -81,7 +81,8 @@ def run_all_ctest(module_name):
                     config_value + ", " + row["TYPE(GOOD|BAD)"] + ", " + result
             csv_output.append(lines)
             progress = float(idx / len(df)) * 100
-            print("[myctest]--> current is " + str(idx) + " test, " + str(progress) + "% finished.")
+            print("[ctest]--> current is " + str(idx) + " test, " + str(progress) + "% finished.")
+            print("")
             idx = idx + 1
             fp.write("%s\n" % lines)
         print('Done')
@@ -91,8 +92,8 @@ def inject(name, config_value):
     if str(config_value) == "nan":
         config_value = " "
     with open(ctest_file, 'w') as fp:
-        print("ctest file at : " + ctest_file)
-        print("inject parameter: " + name + " = " + str(config_value))
+        print("[ctest]--> ctest file at : " + ctest_file)
+        print("[ctest]--> inject parameter: " + name + " = " + str(config_value))
         fp.write(name + " =" + config_value)
 
 
@@ -112,7 +113,7 @@ def main():
     # check the file exist
     file_path = 'config_result/generated_{}_vals.csv'.format(sys.argv[1])
     if file_is_exist(file_path):
-        print("value file exist! ")
+        print("[ctest]--> value file exist! ")
     else:
         # auto generate configuration values
         file_generate(sys.argv[1])
@@ -128,7 +129,8 @@ if __name__ == "__main__":
     # run_ctest(module, testName, param, value)
     # file_generate("1")
     # run_all_ctest("core-common")
-    main()
+    mydf = file_generate("common")
+    print(mydf)
     # my_file = 'config_result/generated_common_vals.csv'
     # mydf = pd.read_csv(my_file, sep=',', engine='python')
     # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)
