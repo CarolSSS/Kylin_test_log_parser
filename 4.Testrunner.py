@@ -36,7 +36,7 @@ def file_generate(module_name):
 
 def run_ctest(module_name, test_name, config_parameter, config_value):
     inject(config_parameter, config_value)
-    command = "mvn -pl " + module_name + " test -Dtest=" + test_name
+    command = "mvn -pl core-" + module_name + " test -Dtest=" + test_name
     print(command)
     os.chdir(working_dir)
     print("change dir to " + working_dir)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
     # file_generate("1")
     # run_all_ctest("core-common")
     main()
-    # my_file = 'config_result/generated_core-common_vals.csv'
+    # my_file = 'config_result/generated_common_vals.csv'
     # mydf = pd.read_csv(my_file, sep=',', engine='python')
     # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)
     # print(value)
