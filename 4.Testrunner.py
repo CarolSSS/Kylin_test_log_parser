@@ -1,26 +1,27 @@
 import os
 import json
 from pathlib import Path
-
-import numpy as np
 import pandas as pd
+import sys
+import os.path
 import datetime
+import importlib.util
+spec = importlib.util.spec_from_file_location(
+    name="my_module",  # note that ".test" is not a valid module name
+    location="3.generate_value.py",
+)
+generate_value = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(generate_value)
 
-# to
 ctest_file = "../kylin/core-common/src/main/resources/ctest.properties"
 working_dir = "../kylin"
 git_link = "https://github.com/apache/kylin"
 sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 
 
-# TODO
-# finished file gnerate function
-# finish run all test function
-
-
-def file_generate(file_path):
+def file_generate(module_name):
+    # implement auto_generate
     file_path = './result/common_map.json'
-    module_name = "core-common"
     json_file = open(file_path)
     para_map = json.load(json_file)
     csv_output = []
@@ -52,8 +53,8 @@ def run_ctest(module_name, test_name, config_parameter, config_value):
     return result
 
 
-def file_is_exist(test_name):
-    my_file = Path(test_name + ".json")
+def file_is_exist(path):
+    my_file = Path(path)
     return my_file.exists()
 
 
@@ -66,7 +67,7 @@ def run_all_ctest(module_name):
     df = df.fillna(value=" ")
     idx = 0.0
     print("")
-    file_name = 'config_result/' + module_name + ".csv"
+    file_name = 'config_result/' + module_name + "_result.csv"
     with open(file_name, 'w+') as fp:
         header = "REPO, SHA, CONFIG_PARAMETER, TEST_NAME, VALUE, TYPE(GOOD|BAD), EXPECTATION(PASS|FAIL)"
         fp.write("%s\n" % header)
@@ -102,14 +103,32 @@ def delete():
     f.close()
 
 
+def main():
+    if len(sys.argv) != 2:
+        print(''' usage: python3 4.Testrunner.py + module name''')
+        return 0
+    print("[ctest]--> Working on Module: " + sys.argv[1])
+    print("[ctest]--> Generate the Configuration Test value: ")
+    # check the file exist
+    file_path = 'config_result/generated_{}_vals.csv'.format(sys.argv[1])
+    if file_is_exist(file_path):
+        print("value file exist! ")
+    else:
+        # auto generate configuration values
+        file_generate(sys.argv[1])
+    # running test
+    run_all_ctest(sys.argv[1])
+
+
 if __name__ == "__main__":
     # module = "core-common"
     # testName = "KylinServerDiscoveryTest#test"
-    param = "kylin.job.remote-cli-password"
+    # param = "kylin.job.remote-cli-password"
     # value = ""
     # run_ctest(module, testName, param, value)
     # file_generate("1")
-    run_all_ctest("core-common")
+    # run_all_ctest("core-common")
+    main()
     # my_file = 'config_result/generated_core-common_vals.csv'
     # mydf = pd.read_csv(my_file, sep=',', engine='python')
     # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)
