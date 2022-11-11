@@ -130,7 +130,7 @@ if __name__ == "__main__":
     # run_all_ctest("core-common")
     # mydf = file_generate("common")
     # print(mydf)
-    # my_file = 'config_result/generated_common_vals.csv'
+    # my_file = 'config_result/generated_common_vals_example.csv'
     # mydf = pd.read_csv(my_file, sep=',', engine='python')
     # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)
     # print(value)
