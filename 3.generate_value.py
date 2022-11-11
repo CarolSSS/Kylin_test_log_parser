@@ -24,6 +24,13 @@ def auto_generate(module_name):
     # Opening JSON file
     with open('result/{}_default_value.json'.format(module_name)) as json_file:
         data = json.load(json_file)
+    with open('all_paras.json') as json_file:
+        data2 = json.load(json_file)
+    for i in data.keys():
+        if i in data2:
+            for j in data2[i]:
+                data[i].append(j)
+    
     # All configs value
     all_keys = data.keys()
 
