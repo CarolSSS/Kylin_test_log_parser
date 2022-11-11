@@ -1,13 +1,12 @@
-import os
+import importlib.util
 import json
+import os
+import os.path
+import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
-import sys
-import os.path
-import datetime
-import importlib.util
+
 spec = importlib.util.spec_from_file_location(
     name="my_module",  # note that ".test" is not a valid module name
     location="3.generate_value.py",
@@ -122,15 +121,15 @@ def main():
 
 
 if __name__ == "__main__":
-    # module = "core-common"
+    module = "common"
     # testName = "KylinServerDiscoveryTest#test"
     # param = "kylin.job.remote-cli-password"
     # value = ""
     # run_ctest(module, testName, param, value)
     # file_generate("1")
     # run_all_ctest("core-common")
-    mydf = file_generate("common")
-    print(mydf)
+    # mydf = file_generate("common")
+    # print(mydf)
     # my_file = 'config_result/generated_common_vals.csv'
     # mydf = pd.read_csv(my_file, sep=',', engine='python')
     # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)
