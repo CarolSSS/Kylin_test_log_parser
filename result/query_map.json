@@ -1,0 +1,143 @@
+{
+  "org.apache.kylin.query.routing.RealizationCheckTest#testRealizationCheck": [
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.cube.cuboid-scheduler",
+    "kylin.metadata.url",
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.cube.rowkey.max-size",
+    "kylin.source.hive.default-decimal-precision",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.data-model-impl",
+    "kylin.source.hive.default-decimal-scale"
+  ],
+  "org.apache.kylin.query.relnode.visitor.TupleFilterVisitorTest#testMergeToInClause2": [
+    "kylin.stream.event.timezone",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.calcite.KylinRelDataTypeSystemTest#testIllegalDecimalType": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.relnode.visitor.TupleFilterVisitorTest#testMergeToInClause1": [
+    "kylin.stream.event.timezone",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testMassageSql": [
+    "kylin.query.transformers",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.server.cluster-servers",
+    "kylin.query.escape-default-keyword",
+    "kylin.query.force-limit"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testKeywordDefaultDirtyHack": [
+    "kylin.query.transformers",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.server.cluster-servers",
+    "kylin.query.force-limit"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testRemoveCommentInSql": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.schema.OLAPTableTest#testCreateSqlType": [
+    "kylin.metadata.url",
+    "kylin.source.hive.default-varchar-precision"
+  ],
+  "org.apache.kylin.query.aggregate.DimCountDistinctAggFuncTest#testEmpty": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testappendLimitOffsetToSql": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testUnknownErrorResponseMessage": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testLimitAndOffset": [
+    "kylin.query.transformers",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.server.cluster-servers",
+    "kylin.query.escape-default-keyword",
+    "kylin.query.force-limit"
+  ],
+  "org.apache.kylin.query.util.KeywordDefaultDirtyHackTest#testTransform": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.QueryConnectionTest#testGetConnection": [
+    "kylin.query.pushdown.enabled",
+    "kylin.query.pushdown.runner-class-name",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.storage.url",
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.query.calcite.extras-props.conformance",
+    "kylin.cube.rowkey.max-size",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.query.schema-factory",
+    "kylin.source.hive.connection-user",
+    "kylin.metadata.sync-error-handler",
+    "kylin.metadata.realization-providers",
+    "kylin.metadata.url",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.source.hive.connection-url",
+    "kylin.source.hive.connection-password",
+    "kylin.cube.cuboid-scheduler",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.metadata.data-model-impl",
+    "kylin.query.calcite.extras-props.quoting",
+    "kylin.query.calcite.extras-props.caseSensitive",
+    "kylin.source.hive.default-decimal-precision",
+    "kylin.query.calcite.extras-props.unquotedCasing",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.server.cluster-servers",
+    "kylin.source.hive.default-decimal-scale"
+  ],
+  "org.apache.kylin.query.aggregate.DimCountDistinctAggFuncTest#testBasic": [
+    "kylin.metadata.url",
+    "kylin.query.max-dimension-count-distinct"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testRemoveCatalog": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testForceLimit": [
+    "kylin.query.transformers",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.server.cluster-servers",
+    "kylin.query.escape-default-keyword"
+  ],
+  "org.apache.kylin.query.aggregate.DimCountDistinctAggFuncTest#testThreshold": [
+    "kylin.metadata.url",
+    "kylin.query.max-dimension-count-distinct"
+  ],
+  "org.apache.kylin.query.util.QueryUtilTest#testIsSelect": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.query.calcite.KylinRelDataTypeSystemTest#testLegalDecimalType": [
+    "kylin.metadata.url"
+  ]
+}

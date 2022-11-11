@@ -22,7 +22,10 @@ sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 
 def run_ctest(module_name, test_name, config_parameter, config_value):
     inject(config_parameter, config_value)
-    command = "mvn -pl core-" + module_name + " test -Dtest=" + test_name
+    if module_name == "query":
+        command = "mvn -pl " + module_name + " test -Dtest=" + test_name
+    else:
+        command = "mvn -pl core-" + module_name + " test -Dtest=" + test_name
     os.chdir(working_dir)
     print("[ctest]--> change dir to " + working_dir)
     print("[ctest]--> run command : " + command)
@@ -96,12 +99,6 @@ def main():
     print("[ctest]--> Working on Module: " + sys.argv[1])
     print("[ctest]--> Generate the Configuration Test value: ")
     # check the file exist
-    file_path = 'config_result/generated_{}_vals.csv'.format(sys.argv[1])
-    if file_is_exist(file_path):
-        print("[ctest]--> value file exist! ")
-    else:
-        # auto generate configuration values
-        file_generate(sys.argv[1])
     # running test
     run_all_ctest(sys.argv[1])
 
@@ -116,6 +113,7 @@ if __name__ == "__main__":
     # run_all_ctest("core-common")
     # mydf = file_generate("common")
     # print(mydf)
+    main()
     # my_file = 'config_result/generated_common_vals_example.csv'
     # mydf = pd.read_csv(my_file, sep=',', engine='python')
     # value = mydf[mydf.CONFIG_PARAMETER == "kylin.job.remote-cli-password"]["VALUE"].head(1)

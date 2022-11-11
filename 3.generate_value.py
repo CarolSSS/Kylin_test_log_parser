@@ -119,4 +119,4 @@ def auto_generate(module_name):
 
 
 if __name__ == "__main__":
-    auto_generate("cube")
+    auto_generate("query")
