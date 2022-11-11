@@ -8,8 +8,8 @@ def db_generate(module_name):
     git_link = "https://github.com/apache/kylin"
     sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
     file_path = './result/{}_map.json'.format(module_name)
-    json_file = open(file_path)
-    para_map = json.load(json_file)
+    map_file = open(file_path)
+    para_map = json.load(map_file)
     db = []
     header = ["REPO", "SHA", "CONFIG_PARAMETER", "TEST_NAME", "VALUE", "TYPE(GOOD|BAD)", "EXPECTATION(PASS|FAIL)"]
     for test_name in para_map:
@@ -26,11 +26,11 @@ def auto_generate(module_name):
         data = json.load(json_file)
     with open('all_paras.json') as json_file:
         data2 = json.load(json_file)
-    for i in data.keys():
-        if i in data2:
-            for j in data2[i]:
-                data[i].append(j)
-    
+    for i in data2.keys():
+        if i in data:
+            data[i] = list(set(data[i] + data2[i]))
+        else:
+            data[i] = data2[i]
     # All configs value
     all_keys = data.keys()
 
@@ -117,3 +117,7 @@ def auto_generate(module_name):
                 # print(new_df)
 
     new_df.to_csv('config_result/generated_{}_vals.csv'.format(module_name))
+
+
+if __name__ == "__main__":
+    auto_generate("common")
