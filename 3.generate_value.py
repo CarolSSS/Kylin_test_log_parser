@@ -51,20 +51,44 @@ def auto_generate(module_name):
                 if j.isnumeric():
                     # print("num")
                     # print(j)
-                    curr = all_generate.get(i, set())
-                    curr.add((j, "GOOD"))
-                    curr.add(('some-value', "BAD"))
-                    curr.add((-300, "BAD"))
-                    curr.add((0, "GOOD"))
-                    curr.add((0.1, "GOOD"))
-                    curr.add((100, "GOOD"))
-                    curr.add((600000, "GOOD"))
+                    if (type(j) == type(1.0)):
+                        curr = all_generate.get(i, set())
+                        curr.add((j, "GOOD"))
+                        curr.add((0, "GOOD"))
+                        curr.add((0.5, "GOOD"))
+                        curr.add((20.5, "GOOD"))
+                    elif i[-(len("ratio") + 1):] == "ratio" or i[-(len("coefficient") + 1):] == "coefficient":
+                        curr.add((-10, "BAD"))
+                        curr.add((0.9, "GOOD"))
+                        curr.add((0.1, "GOOD"))
+                    elif i[-(len("second") + 1):] == "second" or i[-(len("seconds")+ 1):] == "seconds":
+                        curr.add((-300, "BAD"))
+                        curr.add((0, "GOOD"))
+                        curr.add((0.1, "GOOD"))
+                        curr.add((500, "GOOD"))
+                    elif (j == 256 or j == 512 or j == 1024 or j == 2048):
+                        curr = all_generate.get(i, set())
+                        curr.add((512, "GOOD"))
+                        curr.add((1024, "GOOD"))
+                        curr.add((2048, "GOOD"))
+                        curr.add((-100, "BAD"))    
+                    else:
+                        curr = all_generate.get(i, set())
+                        curr.add((500, "GOOD"))
+                        curr.add((0, "GOOD"))
+                        curr.add((600000, "GOOD"))
+                        curr.add((-300, "BAD"))
                     all_generate[i] = curr
                 # true false
                 elif j == 'true' or j == 'false':
                     curr = all_generate.get(i, set())
                     curr.add(('true', "GOOD"))
                     curr.add(('false', "GOOD"))
+                    all_generate[i] = curr
+                elif j == 'TRUE' or j == 'FALSE':
+                    curr = all_generate.get(i, set())
+                    curr.add(('TRUE', "GOOD"))
+                    curr.add(('FALSE', "GOOD"))
                     all_generate[i] = curr
                 # Prefix string
                 elif len(j) > 1 and j[-1] == '_':
@@ -95,10 +119,20 @@ def auto_generate(module_name):
                     curr.add(('whoami@kylin.apache.org', "GOOD"))
                     curr.add(('kylin@kylin.apache.org', "GOOD"))
                     all_generate[i] = curr
+                elif j == "query" or j == "all" or j == "job":
+                    curr = all_generate.get(i, set())
+                    curr.add(("query" "GOOD"))
+                    curr.add(('all"', "GOOD"))
+                    curr.add(('job', "GOOD"))
+                    curr.add(('VERYBADVAL', "BAD"))
+                    all_generate[i] = curr
+                # Manually check here
                 else:
                     curr = all_generate.get(i, set())
                     curr.add((j, "GOOD"))
                     curr.add(('obviously-bad-value', "BAD"))
+                    # curr.add((' ', "MANUAL"))
+                    print(i)
                     all_generate[i] = curr
 
     new_df = pd.DataFrame()
