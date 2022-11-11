@@ -68,7 +68,6 @@ def auto_generate(module_name):
                     all_generate[i] = curr
                 # Prefix string
                 elif len(j) > 1 and j[-1] == '_':
-                    print("prefix")
                     curr = all_generate.get(i, set())
                     curr.add((j, "GOOD"))
                     curr.add(('KYLIN_', "GOOD"))
@@ -120,4 +119,4 @@ def auto_generate(module_name):
 
 
 if __name__ == "__main__":
-    auto_generate("common")
+    auto_generate("cube")
