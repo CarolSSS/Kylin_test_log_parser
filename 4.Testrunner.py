@@ -20,20 +20,6 @@ git_link = "https://github.com/apache/kylin"
 sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 
 
-def file_generate(module_name):
-    file_path = './result/{}_map.json'.format(module_name)
-    json_file = open(file_path)
-    para_map = json.load(json_file)
-    db = []
-    header = ["REPO", "SHA", "CONFIG_PARAMETER", "TEST_NAME", "VALUE", "TYPE(GOOD|BAD)", "EXPECTATION(PASS|FAIL)"]
-    for test_name in para_map:
-        for i in para_map[test_name]:
-            output = [git_link, sha,  i,   test_name,  "  ", " ", " "]
-            db.append(output)
-    db = pd.DataFrame(db, columns=header)
-    return db
-
-
 def run_ctest(module_name, test_name, config_parameter, config_value):
     inject(config_parameter, config_value)
     command = "mvn -pl core-" + module_name + " test -Dtest=" + test_name
