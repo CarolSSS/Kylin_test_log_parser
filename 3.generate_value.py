@@ -4,6 +4,22 @@ import pandas as pd
 import json
 
 
+def db_generate(module_name):
+    git_link = "https://github.com/apache/kylin"
+    sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
+    file_path = './result/{}_map.json'.format(module_name)
+    json_file = open(file_path)
+    para_map = json.load(json_file)
+    db = []
+    header = ["REPO", "SHA", "CONFIG_PARAMETER", "TEST_NAME", "VALUE", "TYPE(GOOD|BAD)", "EXPECTATION(PASS|FAIL)"]
+    for test_name in para_map:
+        for i in para_map[test_name]:
+            output = [git_link, sha,  i,   test_name,  "  ", " ", " "]
+            db.append(output)
+    db = pd.DataFrame(db, columns=header)
+    return db
+
+
 def auto_generate(module_name):
     # Opening JSON file
     with open('result/{}_default_value.json'.format(module_name)) as json_file:
@@ -11,7 +27,7 @@ def auto_generate(module_name):
     # All configs value
     all_keys = data.keys()
 
-    df = pd.read_csv('config_result/{}.csv'.format(module_name), sep=', ', engine='python')
+    df = db_generate(module_name)
     # All parameters
     all_paras = df['CONFIG_PARAMETER']
 
