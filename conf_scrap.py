@@ -47,6 +47,7 @@ for i in all_li:
     if len(all_texts) > 1:
         description = i.text.split(':', 2)[1].strip()
         print(description)
+        
     all_descriptions[para] = description
     print("====")
 
