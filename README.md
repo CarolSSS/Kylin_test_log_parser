@@ -6,10 +6,12 @@
 
 * Current stage: 
     - `generate_all_tests.py` Implement function to generate all test commands into Kylin file
-    - `map_logs.py` Map the result from getters and setters in test log data into json file
+    - `map_logs_generate_default.py` Map the result from getters and setters in test log data into json file and parse default configuration values
     - `read_properties.py` Read all properties
-    - `injection.py` Inject properties
+    - `Testrunner.py` Inject properties and run tests
+    - `conf_scrap.py` Scrapping kylin official website for configuration values.
+    -  `generate_value.py` Generate configuration values
 
 * TODO:
-    - Add a function that reads in all the default property value received by get, to aid trying different value in the future.
-    - working on file generation function and run all test function in testrunner file.
+    - Keep on modifying generate_value functions to be more precise.
+
