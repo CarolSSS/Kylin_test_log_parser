@@ -5,9 +5,9 @@ import os
 PRE_LEN = len("../")
 SUF_LEN = len(".java")
 THRESHOLD = len('Test.java')
-MODULE_NAME = "core-common"
-LOG_FILE = "common_logs"
-name = "common"
+MODULE_NAME = "jdbc"
+LOG_FILE = "jdbc_logs"
+name = "jdbc"
 
 # MODULE_NAME = "core-cube"
 # LOG_FILE = "cube_logs"
