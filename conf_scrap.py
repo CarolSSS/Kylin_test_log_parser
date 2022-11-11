@@ -39,15 +39,17 @@ for i in all_li:
     # Add all highlighted
     for j in i.findAll('code',{"class": "highlighter-rouge"})[1:]:
         curr.add(j.string)
-    all_para[para] = curr
     # print(i.text)
     all_texts = i.text.split(':', 2)
     # There is content
     description = ''
+    print(i)
     if len(all_texts) > 1:
         description = i.text.split(':', 2)[1].strip()
-        print(description)
-        
+        for j in i.findAll('em'):
+            curr.add(j.string)
+    all_para[para] = curr
+
     all_descriptions[para] = description
     print("====")
 
@@ -70,7 +72,6 @@ for i in all_para.keys():
 import json
 with open("all_paras.json", "w") as outfile:
     json.dump(all_para_li, outfile, indent=2)
-
 
 with open("all_paras_descriptions.json", "w") as outfile:
     json.dump(all_descriptions, outfile, indent=2)

@@ -3,9 +3,9 @@
     "/kylin"
   ],
   "kylin.env": [
-    "QA",
+    "DEV",
     "PROD",
-    "DEV"
+    "QA"
   ],
   "kylin.env.zookeeper-base-path": [
     "/kylin"
@@ -15,9 +15,9 @@
     "HADOOP_CONF_DIR"
   ],
   "kylin.server.mode": [
-    "job",
     "all",
-    "query"
+    "query",
+    "job"
   ],
   "kylin.server.cluster-name": [],
   "kylin.job.scheduler.default=2": [
@@ -39,24 +39,38 @@
   "kylin.web.export-allow-admin": [],
   "kylin.web.export-allow-other": [],
   "kylin.web.dashboard-enabled": [],
-  "kylin.metadata.url": [],
+  "kylin.metadata.url": [
+    "kylin_metadata@hbase"
+  ],
   "kylin.metadata.dimension-encoding-max-length": [],
   "kylin.metadata.sync-retries": [],
-  "kylin.metadata.sync-error-handler": [],
-  "kylin.metadata.check-copy-on-write": [],
+  "kylin.metadata.sync-error-handler": [
+    "DefaultSyncErrorHandler"
+  ],
+  "kylin.metadata.check-copy-on-write": [
+    "FALSE"
+  ],
   "kylin.metadata.hbase-client-scanner-timeout-period": [],
   "kylin.metadata.hbase-rpc-timeout": [],
   "kylin.metadata.hbase-client-retries-number": [],
-  "kylin.metadata.resource-store-provider.jdbc": [],
+  "kylin.metadata.resource-store-provider.jdbc": [
+    "org.apache.kylin.common.persistence.JDBCResourceStore"
+  ],
   "kylin.metadata.jdbc.dialect": [],
   "kylin.metadata.jdbc.json-always-small-cell": [],
   "kylin.metadata.jdbc.small-cell-meta-size-warning-threshold": [],
   "kylin.metadata.jdbc.small-cell-meta-size-error-threshold": [],
   "kylin.metadata.jdbc.max-cell-size": [],
-  "kylin.source.hive.client": [],
+  "kylin.source.hive.client": [
+    "beeline",
+    "cli"
+  ],
   "kylin.source.hive.beeline-shell": [],
   "kylin.source.hive.beeline-params": [],
-  "kylin.source.hive.enable-sparksql-for-table-ops": [],
+  "kylin.source.hive.enable-sparksql-for-table-ops": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.source.hive.sparksql-beeline-shell": [],
   "kylin.source.hive.sparksql-beeline-params": [],
   "kylin.source.default": [],
@@ -68,13 +82,26 @@
   "kylin.source.jdbc.sqoop-home": [],
   "kylin.source.jdbc.sqoop-mapper-num": [],
   "kylin.source.jdbc.field-delimiter": [],
-  "kylin.source.hive.default-varchar-precision": [],
-  "kylin.source.hive.default-char-precision": [],
-  "kylin.source.hive.default-decimal-precision": [],
-  "kylin.source.hive.default-decimal-scale": [],
-  "kylin.cube.ignore-signature-inconsistency": [],
+  "kylin.source.hive.default-varchar-precision": [
+    "varchar"
+  ],
+  "kylin.source.hive.default-char-precision": [
+    "char"
+  ],
+  "kylin.source.hive.default-decimal-precision": [
+    "decimal"
+  ],
+  "kylin.source.hive.default-decimal-scale": [
+    "decimal"
+  ],
+  "kylin.cube.ignore-signature-inconsistency": [
+    "FALSE"
+  ],
   "kylin.cube.aggrgroup.max-combination": [],
-  "kylin.cube.aggrgroup.is-mandatory-only-valid": [],
+  "kylin.cube.aggrgroup.is-mandatory-only-valid": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.cube.rowkey.max-size": [],
   "kylin.cube.allow-appear-in-multiple-projects": [],
   "kylin.cube.gtscanrequest-serialization-level": [],
@@ -85,29 +112,50 @@
   "kylin.cube.size-estimate-topn-ratio": [],
   "kylin.cube.algorithm": [
     "layer",
-    "inmem",
-    "auto"
+    "auto",
+    "inmem"
   ],
   "kylin.cube.algorithm.layer-or-inmem-threshold": [],
   "kylin.cube.algorithm.inmem-split-limit": [],
   "kylin.cube.algorithm.inmem-concurrent-threads": [],
   "kylin.job.sampling-percentage": [],
-  "kylin.cube.is-automerge-enabled": [],
+  "kylin.cube.is-automerge-enabled": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.snapshot.max-mb": [],
   "kylin.snapshot.max-cache-entry": [],
   "kylin.snapshot.ext.shard-mb": [],
   "kylin.snapshot.ext.local.cache.path": [],
   "kylin.snapshot.ext.local.cache.max-size-gb": [],
   "kylin.storage.default": [],
-  "kylin.source.hive.keep-flat-table": [],
-  "kylin.source.hive.database-for-flat-table": [],
-  "kylin.source.hive.flat-table-storage-format": [],
-  "kylin.source.hive.flat-table-field-delimiter": [],
-  "kylin.source.hive.intermediate-table-prefix": [],
-  "kylin.source.hive.redistribute-flat-table": [],
-  "kylin.source.hive.redistribute-column-count": [],
-  "kylin.source.hive.table-dir-create-first": [],
-  "kylin.storage.partition.aggr-spill-enabled": [],
+  "kylin.source.hive.keep-flat-table": [
+    "FALSE"
+  ],
+  "kylin.source.hive.database-for-flat-table": [
+    "default"
+  ],
+  "kylin.source.hive.flat-table-storage-format": [
+    "SEQUENCEFILE"
+  ],
+  "kylin.source.hive.flat-table-field-delimiter": [
+    "\\u001F"
+  ],
+  "kylin.source.hive.intermediate-table-prefix": [
+    "kylin_intermediate_"
+  ],
+  "kylin.source.hive.redistribute-flat-table": [
+    "TRUE"
+  ],
+  "kylin.source.hive.redistribute-column-count": [
+    "3"
+  ],
+  "kylin.source.hive.table-dir-create-first": [
+    "FALSE"
+  ],
+  "kylin.storage.partition.aggr-spill-enabled": [
+    "TRUE"
+  ],
   "kylin.engine.mr.lib-dir": [],
   "kylin.engine.mr.reduce-input-mb": [],
   "kylin.engine.mr.reduce-count-ratio": [],
@@ -116,6 +164,7 @@
   "kylin.engine.mr.mapper-input-rows": [],
   "kylin.engine.mr.max-cuboid-stats-calculator-number": [],
   "kylin.engine.mr.build-dict-in-reducer": [
+    "Extract Fact Table Distinct Columns",
     "TRUE"
   ],
   "kylin.engine.mr.yarn-check-interval-seconds": [],
@@ -128,41 +177,74 @@
   "kylin.dictionary.append-max-versions": [],
   "kylin.dictionary.append-version-ttl": [],
   "kylin.dictionary.resuable": [],
-  "kylin.dictionary.shrunken-from-global-enabled": [],
-  "kylin.engine.mr.build-uhc-dict-in-additional-step": [],
+  "kylin.dictionary.shrunken-from-global-enabled": [
+    "TRUE"
+  ],
+  "kylin.engine.mr.build-uhc-dict-in-additional-step": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.engine.mr.uhc-reducer-count": [],
-  "kylin.engine.spark-conf.spark.master": [],
-  "kylin.engine.spark-conf.spark.submit.deployMode": [],
-  "kylin.engine.spark-conf.spark.yarn.queue": [],
+  "kylin.engine.spark-conf.spark.master": [
+    "yarn"
+  ],
+  "kylin.engine.spark-conf.spark.submit.deployMode": [
+    "cluster"
+  ],
+  "kylin.engine.spark-conf.spark.yarn.queue": [
+    "default"
+  ],
   "kylin.engine.spark-conf.spark.driver.memory": [],
   "kylin.engine.spark-conf.spark.executor.memory": [],
   "kylin.engine.spark-conf.spark.yarn.executor.memoryOverhead": [],
   "kylin.engine.spark-conf.spark.executor.cores": [],
   "kylin.engine.spark-conf.spark.network.timeout": [],
   "kylin.engine.spark-conf.spark.executor.instances": [],
-  "kylin.engine.spark-conf.spark.eventLog.enabled": [],
+  "kylin.engine.spark-conf.spark.eventLog.enabled": [
+    "TRUE"
+  ],
   "kylin.engine.spark-conf.spark.hadoop.dfs.replication": [],
-  "kylin.engine.spark-conf.spark.hadoop.mapreduce.output.fileoutputformat.compress": [],
-  "kylin.engine.spark-conf.spark.hadoop.mapreduce.output.fileoutputformat.compress.codec": [],
+  "kylin.engine.spark-conf.spark.hadoop.mapreduce.output.fileoutputformat.compress": [
+    "TRUE"
+  ],
+  "kylin.engine.spark-conf.spark.hadoop.mapreduce.output.fileoutputformat.compress.codec": [
+    "org.apache.hadoop.io.compress.DefaultCodec"
+  ],
   "kylin.engine.spark.rdd-partition-cut-mb": [],
   "kylin.engine.spark.min-partition": [],
   "kylin.engine.spark.max-partition": [],
-  "kylin.engine.spark.storage-level": [],
+  "kylin.engine.spark.storage-level": [
+    "MEMORY_AND_DISK_SER"
+  ],
   "kylin.engine.spark-conf-mergedict.spark.executor.memory": [],
   "kylin.engine.spark-conf-mergedict.spark.memory.fraction": [],
-  "kylin.engine.livy-conf.livy-enabled": [],
-  "kylin.engine.livy-conf.livy-url": [],
-  "kylin.engine.livy-conf.livy-key.*": [],
-  "kylin.engine.livy-conf.livy-arr.*": [],
-  "kylin.engine.livy-conf.livy-map.*": [],
+  "kylin.engine.livy-conf.livy-enabled": [
+    "FALSE"
+  ],
+  "kylin.engine.livy-conf.livy-url": [
+    "http://127.0.0.1:8998"
+  ],
+  "kylin.engine.livy-conf.livy-key.*": [
+    "kylin.engine.livy-conf.livy-key.name=kylin-livy-1"
+  ],
+  "kylin.engine.livy-conf.livy-arr.*": [
+    "kylin.engine.livy-conf.livy-arr.jars=hdfs://your_self_path/hbase-common-1.4.8.jar,hdfs://your_self_path/hbase-server-1.4.8.jar,hdfs://your_self_path/hbase-client-1.4.8.jar"
+  ],
+  "kylin.engine.livy-conf.livy-map.*": [
+    "kylin.engine.livy-conf.livy-map.spark.executor.instances=10"
+  ],
   "kylin.engine.spark-conf.spark.shuffle.service.enabled": [],
   "kylin.engine.spark-conf.spark.dynamicAllocation.enabled": [],
   "kylin.engine.spark-conf.spark.dynamicAllocation.initialExecutors": [],
   "kylin.engine.spark-conf.spark.dynamicAllocation.minExecutors": [],
   "kylin.engine.spark-conf.spark.dynamicAllocation.maxExecutors": [],
   "kylin.engine.spark-conf.spark.dynamicAllocation.executorIdleTimeout": [],
-  "kylin.job.log-dir": [],
-  "kylin.job.allow-empty-segment": [],
+  "kylin.job.log-dir": [
+    "/tmp/kylin/logs"
+  ],
+  "kylin.job.allow-empty-segment": [
+    "TRUE"
+  ],
   "kylin.job.max-concurrent-jobs": [],
   "kylin.job.retry": [],
   "kylin.job.retry-interval": [],
@@ -170,41 +252,70 @@
   "kylin.job.scheduler.priority-bar-fetch-from-queue": [],
   "kylin.job.scheduler.poll-interval-second": [],
   "kylin.job.error-record-threshold": [],
-  "kylin.job.cube-auto-ready-enabled": [],
+  "kylin.job.cube-auto-ready-enabled": [
+    "TRUE"
+  ],
   "kylin.cube.max-building-segments": [],
-  "kylin.job.notification-enabled": [],
-  "kylin.job.notification-mail-enable-starttls": [],
+  "kylin.job.notification-enabled": [
+    "FALSE"
+  ],
+  "kylin.job.notification-mail-enable-starttls": [
+    "FALSE"
+  ],
   "kylin.job.notification-mail-host": [],
   "kylin.job.notification-mail-port": [],
   "kylin.job.notification-mail-username": [],
   "kylin.job.notification-mail-password": [],
   "kylin.job.notification-mail-sender": [],
   "kylin.job.notification-admin-emails": [],
-  "kylin.cube.cubeplanner.enabled": [],
-  "kylin.server.query-metrics2-enabled": [],
-  "kylin.metrics.reporter-query-enabled": [],
-  "kylin.metrics.reporter-job-enabled": [],
-  "kylin.metrics.monitor-enabled": [],
-  "kylin.cube.cubeplanner.enabled-for-existing-cube": [],
+  "kylin.cube.cubeplanner.enabled": [
+    "TRUE"
+  ],
+  "kylin.server.query-metrics2-enabled": [
+    "TRUE",
+    "FALSE"
+  ],
+  "kylin.metrics.reporter-query-enabled": [
+    "TRUE"
+  ],
+  "kylin.metrics.reporter-job-enabled": [
+    "TRUE"
+  ],
+  "kylin.metrics.monitor-enabled": [
+    "TRUE"
+  ],
+  "kylin.cube.cubeplanner.enabled-for-existing-cube": [
+    "TRUE"
+  ],
   "kylin.cube.cubeplanner.algorithm-threshold-greedy": [],
   "kylin.cube.cubeplanner.expansion-threshold": [],
   "kylin.cube.cubeplanner.recommend-cache-max-size": [],
   "kylin.cube.cubeplanner.query-uncertainty-ratio": [],
   "kylin.cube.cubeplanner.bpus-min-benefit-ratio": [],
   "kylin.cube.cubeplanner.algorithm-threshold-genetic": [],
-  "kylin.storage.hbase.table-name-prefix": [],
-  "kylin.storage.hbase.namespace": [],
+  "kylin.storage.hbase.table-name-prefix": [
+    "KYLIN_"
+  ],
+  "kylin.storage.hbase.namespace": [
+    "default"
+  ],
   "kylin.storage.hbase.coprocessor-local-jar": [],
   "kylin.storage.hbase.coprocessor-mem-gb": [],
-  "kylin.storage.hbase.run-local-coprocessor": [],
+  "kylin.storage.hbase.run-local-coprocessor": [
+    "FALSE"
+  ],
   "kylin.storage.hbase.coprocessor-timeout-seconds": [],
   "kylin.storage.hbase.region-cut-gb": [],
   "kylin.storage.hbase.min-region-count": [],
   "kylin.storage.hbase.max-region-count": [],
   "kylin.storage.hbase.hfile-size-gb": [],
   "kylin.storage.hbase.max-scan-result-bytes": [],
-  "kylin.storage.hbase.compression-codec": [],
-  "kylin.storage.hbase.rowkey-encoding": [],
+  "kylin.storage.hbase.compression-codec": [
+    "none"
+  ],
+  "kylin.storage.hbase.rowkey-encoding": [
+    "FAST_DIFF"
+  ],
   "kylin.storage.hbase.block-size-bytes": [],
   "kylin.storage.hbase.small-family-block-size-bytes": [],
   "kylin.storage.hbase.owner-tag": [],
@@ -214,44 +325,98 @@
   "kylin.storage.hbase.hconnection-threads-alive-seconds": [],
   "kylin.storage.hbase.replication-scope": [],
   "kylin.storage.hbase.scan-cache-rows": [],
-  "kylin.secondary.storage.url": [],
+  "kylin.secondary.storage.url": [
+    "kylin.secondary.storage.url=hostname:kylin_metadata@hbase,hbase.zookeeper.quorum=hostname:11000,zookeeper.znode.parent=/hbase/"
+  ],
   "kylin.job.execute-output.max-size": [],
   "kylin.engine.spark.output.max-size": [],
-  "kylin.stream.job.dfs.block.size": [],
-  "kylin.stream.index.path": [],
+  "kylin.stream.job.dfs.block.size": [
+    "16M"
+  ],
+  "kylin.stream.index.path": [
+    "stream_index"
+  ],
   "kylin.stream.node": [
     "hostname:port",
+    "null",
     "port"
   ],
-  "kylin.stream.metadata.store.type": [],
-  "kylin.stream.receiver.use-threads-per-query": [],
-  "kylin.stream.index.maxrows": [],
-  "kylin.stream.cube-num-of-consumer-tasks": [],
+  "kylin.stream.metadata.store.type": [
+    "zk"
+  ],
+  "kylin.stream.receiver.use-threads-per-query": [
+    "8"
+  ],
+  "kylin.stream.index.maxrows": [
+    "50000"
+  ],
+  "kylin.stream.cube-num-of-consumer-tasks": [
+    "3"
+  ],
   "kylin.stream.segment.retention.policy": [
     "purge",
+    "IMMUTABLE",
     "fullBuild"
   ],
-  "kylin.stream.build.additional.cuboids": [],
-  "kylin.stream.cube.window": [],
-  "kylin.stream.cube.duration": [],
-  "kylin.stream.cube.duration.max": [],
-  "kylin.stream.checkpoint.file.max.num": [],
-  "kylin.stream.index.checkpoint.intervals": [],
-  "kylin.stream.immutable.segments.max.num": [],
-  "kylin.stream.consume.offsets.latest": [],
-  "kylin.stream.assigner": [
-    "org.apache.kylin.stream.coordinator.assign.Assigner"
+  "kylin.stream.build.additional.cuboids": [
+    "Cube Advanced Setting",
+    "false"
   ],
-  "kylin.stream.coordinator.client.timeout.millsecond": [],
-  "kylin.stream.receiver.client.timeout.millsecond": [],
-  "kylin.stream.receiver.http.max.threads": [],
-  "kylin.stream.receiver.http.min.threads": [],
-  "kylin.stream.receiver.query-core-threads": [],
-  "kylin.stream.receiver.query-max-threads": [],
-  "kylin.stream.segment-max-fragments": [],
-  "kylin.stream.segment-min-fragments": [],
-  "kylin.stream.max-fragment-size-mb": [],
-  "kylin.stream.fragments-auto-merge-enable": [],
+  "kylin.stream.cube.window": [
+    "3600"
+  ],
+  "kylin.stream.cube.duration": [
+    "7200"
+  ],
+  "kylin.stream.cube.duration.max": [
+    "43200"
+  ],
+  "kylin.stream.checkpoint.file.max.num": [
+    "5"
+  ],
+  "kylin.stream.index.checkpoint.intervals": [
+    "300"
+  ],
+  "kylin.stream.immutable.segments.max.num": [
+    "100"
+  ],
+  "kylin.stream.consume.offsets.latest": [
+    "true"
+  ],
+  "kylin.stream.assigner": [
+    "org.apache.kylin.stream.coordinator.assign.Assigner",
+    "DefaultAssigner"
+  ],
+  "kylin.stream.coordinator.client.timeout.millsecond": [
+    "5000"
+  ],
+  "kylin.stream.receiver.client.timeout.millsecond": [
+    "5000"
+  ],
+  "kylin.stream.receiver.http.max.threads": [
+    "200"
+  ],
+  "kylin.stream.receiver.http.min.threads": [
+    "10"
+  ],
+  "kylin.stream.receiver.query-core-threads": [
+    "50"
+  ],
+  "kylin.stream.receiver.query-max-threads": [
+    "200"
+  ],
+  "kylin.stream.segment-max-fragments": [
+    "50"
+  ],
+  "kylin.stream.segment-min-fragments": [
+    "15"
+  ],
+  "kylin.stream.max-fragment-size-mb": [
+    "300"
+  ],
+  "kylin.stream.fragments-auto-merge-enable": [
+    "true"
+  ],
   "kylin.stream.metrics.option": [],
   "kylin.stream.event.timezone": [
     "HOUR_START",
@@ -259,26 +424,41 @@
   ],
   "kylin.stream.auto-resubmit-after-discard-enabled": [],
   "kylin.storage.clean-after-delete-operation": [],
-  "kylin.query.skip-empty-segments": [],
+  "kylin.query.skip-empty-segments": [
+    "TRUE"
+  ],
   "kylin.query.large-query-threshold": [],
-  "kylin.query.security-enabled": [],
-  "kylin.query.security.table-acl-enabled": [],
-  "kylin.query.calcite.extras-props.conformance": [],
-  "kylin.query.calcite.extras-props.caseSensitive": [],
+  "kylin.query.security-enabled": [
+    "TRUE"
+  ],
+  "kylin.query.security.table-acl-enabled": [
+    "TRUE"
+  ],
+  "kylin.query.calcite.extras-props.conformance": [
+    "LENIENT"
+  ],
+  "kylin.query.calcite.extras-props.caseSensitive": [
+    "TRUE"
+  ],
   "kylin.query.calcite.extras-props.unquotedCasing": [
     "TO_UPPER",
     "UNCHANGED",
     "TO_LOWER"
   ],
   "kylin.query.calcite.extras-props.quoting": [
-    "BRACKET",
     "DOUBLE_QUOTE",
+    "BRACKET",
     "BACK_TICK"
   ],
   "kylin.query.statement-cache-max-num": [],
   "kylin.query.statement-cache-max-num-per-key": [],
-  "kylin.query.enable-dict-enumerator": [],
-  "kylin.query.enable-dynamic-column": [],
+  "kylin.query.enable-dict-enumerator": [
+    "FALSE"
+  ],
+  "kylin.query.enable-dynamic-column": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.storage.hbase.max-fuzzykey-scan": [],
   "kylin.storage.hbase.max-fuzzykey-scan-split": [],
   "kylin.storage.hbase.max-visit-scanrange": [],
@@ -301,24 +481,42 @@
     "org.apache.kylin.query.adhoc.PushDownRunnerJdbcImpl"
   ],
   "kylin.query.pushdown.jdbc.url": [],
-  "kylin.query.pushdown.jdbc.driver": [],
-  "kylin.query.pushdown.jdbc.username": [],
+  "kylin.query.pushdown.jdbc.driver": [
+    "org.apache.hive.jdbc.HiveDriver"
+  ],
+  "kylin.query.pushdown.jdbc.username": [
+    "hive"
+  ],
   "kylin.query.pushdown.jdbc.password": [],
   "kylin.query.pushdown.jdbc.pool-max-total": [],
   "kylin.query.pushdown.jdbc.pool-max-idle": [],
   "kylin.query.pushdown.jdbc.pool-min-idle": [],
-  "kylin.query.pushdown.update-enabled": [],
-  "kylin.query.pushdown.cache-enabled": [],
-  "kylin.query.force-limit": [],
-  "kylin.storage.limit-push-down-enabled": [],
+  "kylin.query.pushdown.update-enabled": [
+    "FALSE"
+  ],
+  "kylin.query.pushdown.cache-enabled": [
+    "FALSE"
+  ],
+  "kylin.query.force-limit": [
+    "-1"
+  ],
+  "kylin.storage.limit-push-down-enabled": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.query.flat-filter-max-children": [],
-  "kylin.server.query-metrics-enabled": [],
+  "kylin.server.query-metrics-enabled": [
+    "TRUE",
+    "FALSE"
+  ],
   "kylin.security.profile": [
     "ldap",
     "testing",
     "saml"
   ],
-  "kylin.security.ldap.connection-server": [],
+  "kylin.security.ldap.connection-server": [
+    "ldap://ldap_server:389"
+  ],
   "kylin.security.ldap.connection-username": [],
   "kylin.security.ldap.connection-password": [],
   "kylin.security.ldap.user-search-base": [],
@@ -334,9 +532,16 @@
   "kylin.server.external-acl-provider=org.apache.ranger.authorization.kylin.authorizer.RangerKylinAuthorizer": [
     "org.apache.ranger.authorization.kylin.authorizer.RangerKylinAuthorizer"
   ],
-  "kylin.env.zookeeper-acl-enabled": [],
-  "kylin.env.zookeeper.zk-auth": [],
-  "kylin.env.zookeeper.zk-acl": [],
+  "kylin.env.zookeeper-acl-enabled": [
+    "FALSE"
+  ],
+  "kylin.env.zookeeper.zk-auth": [
+    "digest:ADMIN:KYLIN"
+  ],
+  "kylin.env.zookeeper.zk-acl": [
+    "anyone",
+    "world:anyone:rwcda"
+  ],
   "kylin.query.lazy-query-enabled": [
     "false"
   ],
