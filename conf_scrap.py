@@ -1,6 +1,6 @@
 import requests
 page = requests.get("https://kylin.apache.org/docs30/install/configuration.html")
-
+import re
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -29,13 +29,20 @@ for i in all_li:
     if i.name != 'li':
         continue
     para = i.findAll('code',{"class": "highlighter-rouge"})[0].string
+    # Not interested in this case
+    if para[-2:] ==".*":
+        continue
+    
     if "=" in para:
         all_parts = para.split("=")
         curr = all_para.get(all_parts[0],set())
         # If '=' inside
+        para = all_parts[0]
         curr.add(all_parts[1])
     else:
         curr = all_para.get(para,set())
+    print(para)
+
     # Add all highlighted
     for j in i.findAll('code',{"class": "highlighter-rouge"})[1:]:
         curr.add(j.string)
@@ -43,11 +50,21 @@ for i in all_li:
     all_texts = i.text.split(':', 2)
     # There is content
     description = ''
-    print(i)
+    # print(i)
     if len(all_texts) > 1:
         description = i.text.split(':', 2)[1].strip()
         for j in i.findAll('em'):
             curr.add(j.string)
+        all_default = re.split("default value is ", description)
+        for i in all_default[1:]:
+            raw = re.split(" ", i)[0]
+            if raw[-1] ==')':
+                raw = raw.split("(")[0]
+            if raw[-1] =='.' or raw[-1] ==',':
+                raw = raw[:-1]
+            curr.add(raw)
+            print(raw)
+
     all_para[para] = curr
 
     all_descriptions[para] = description
