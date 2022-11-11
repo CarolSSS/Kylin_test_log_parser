@@ -58,10 +58,12 @@ for i in all_li:
         all_default = re.split("default value is ", description)
         for i in all_default[1:]:
             raw = re.split(" ", i)[0]
-            if raw[-1] ==')':
-                raw = raw.split("(")[0]
             if raw[-1] =='.' or raw[-1] ==',':
                 raw = raw[:-1]
+            if raw[-1] ==')':
+                raw = raw.split("(")[0]
+                print(raw)
+            
             curr.add(raw)
             print(raw)
 

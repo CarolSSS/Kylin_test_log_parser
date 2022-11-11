@@ -4,8 +4,8 @@
   ],
   "kylin.env": [
     "DEV",
-    "QA",
-    "PROD"
+    "PROD",
+    "QA"
   ],
   "kylin.env.zookeeper-base-path": [
     "/kylin"
@@ -15,9 +15,9 @@
     "HADOOP_CONF_DIR"
   ],
   "kylin.server.mode": [
-    "job",
     "query",
-    "all"
+    "all",
+    "job"
   ],
   "kylin.server.cluster-name": [],
   "kylin.job.scheduler.default": [
@@ -90,8 +90,8 @@
     "1"
   ],
   "kylin.source.hive.client": [
-    "beeline",
-    "cli"
+    "cli",
+    "beeline"
   ],
   "kylin.source.hive.beeline-shell": [],
   "kylin.source.hive.beeline-params": [],
@@ -117,20 +117,20 @@
     "\\"
   ],
   "kylin.source.hive.default-varchar-precision": [
-    "256",
-    "varchar"
+    "varchar",
+    "256"
   ],
   "kylin.source.hive.default-char-precision": [
-    "255",
-    "char"
+    "char",
+    "255"
   ],
   "kylin.source.hive.default-decimal-precision": [
-    "decimal",
-    "19"
+    "19",
+    "decimal"
   ],
   "kylin.source.hive.default-decimal-scale": [
-    "decimal",
-    "4"
+    "4",
+    "decimal"
   ],
   "kylin.cube.ignore-signature-inconsistency": [
     "FALSE"
@@ -163,9 +163,9 @@
     "0.5"
   ],
   "kylin.cube.algorithm": [
-    "layer",
+    "auto",
     "inmem",
-    "auto"
+    "layer"
   ],
   "kylin.cube.algorithm.layer-or-inmem-threshold": [
     "7"
@@ -190,7 +190,7 @@
     "500"
   ],
   "kylin.snapshot.ext.shard-mb": [
-    "500(M)"
+    "500"
   ],
   "kylin.snapshot.ext.local.cache.path": [
     "lookup_cache"
@@ -228,7 +228,7 @@
   ],
   "kylin.engine.mr.lib-dir": [],
   "kylin.engine.mr.reduce-input-mb": [
-    "500(MB)"
+    "500"
   ],
   "kylin.engine.mr.reduce-count-ratio": [
     "1.0"
@@ -242,8 +242,8 @@
     "1"
   ],
   "kylin.engine.mr.build-dict-in-reducer": [
-    "TRUE",
-    "Extract Fact Table Distinct Columns"
+    "Extract Fact Table Distinct Columns",
+    "TRUE"
   ],
   "kylin.engine.mr.yarn-check-interval-seconds": [
     "10"
@@ -301,7 +301,7 @@
     "4G"
   ],
   "kylin.engine.spark-conf.spark.yarn.executor.memoryOverhead": [
-    "1024(MB)"
+    "1024"
   ],
   "kylin.engine.spark-conf.spark.executor.cores": [
     "1"
@@ -440,7 +440,7 @@
   ],
   "kylin.storage.hbase.coprocessor-local-jar": [],
   "kylin.storage.hbase.coprocessor-mem-gb": [
-    "3.0(GB)"
+    "3.0"
   ],
   "kylin.storage.hbase.run-local-coprocessor": [
     "FALSE"
@@ -510,8 +510,8 @@
     "stream_index"
   ],
   "kylin.stream.node": [
-    "hostname:port",
     "null",
+    "hostname:port",
     "port"
   ],
   "kylin.stream.metadata.store.type": [
@@ -527,13 +527,13 @@
     "3"
   ],
   "kylin.stream.segment.retention.policy": [
-    "IMMUTABLE",
     "fullBuild",
-    "purge"
+    "purge",
+    "IMMUTABLE"
   ],
   "kylin.stream.build.additional.cuboids": [
-    "false",
-    "Cube Advanced Setting"
+    "Cube Advanced Setting",
+    "false"
   ],
   "kylin.stream.cube.window": [
     "3600"
@@ -618,14 +618,14 @@
     "TRUE"
   ],
   "kylin.query.calcite.extras-props.unquotedCasing": [
-    "TO_UPPER",
     "UNCHANGED",
+    "TO_UPPER",
     "TO_LOWER"
   ],
   "kylin.query.calcite.extras-props.quoting": [
     "BACK_TICK",
-    "DOUBLE_QUOTE",
-    "BRACKET"
+    "BRACKET",
+    "DOUBLE_QUOTE"
   ],
   "kylin.query.statement-cache-max-num": [
     "50000"
@@ -650,8 +650,8 @@
     "1000000"
   ],
   "kylin.query.cache-enabled": [
-    "true",
-    "TRUE"
+    "TRUE",
+    "true"
   ],
   "kylin.query.cache-threshold-duration": [
     "2000"
@@ -731,8 +731,8 @@
   ],
   "kylin.security.profile": [
     "testing",
-    "ldap",
-    "saml"
+    "saml",
+    "ldap"
   ],
   "kylin.security.ldap.connection-server": [
     "ldap://ldap_server:389"
@@ -767,8 +767,8 @@
     "false"
   ],
   "kylin.query.cache-signature-enabled": [
-    "true",
-    "false"
+    "false",
+    "true"
   ],
   "kylin.query.segment-cache-enabled": [
     "false"
