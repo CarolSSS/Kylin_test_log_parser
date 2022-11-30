@@ -1,6 +1,7 @@
 import requests
 page = requests.get("https://kylin.apache.org/docs30/install/configuration.html")
 import re
+import pandas as pd
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -94,3 +95,25 @@ with open("all_paras.json", "w") as outfile:
 
 with open("all_paras_descriptions.json", "w") as outfile:
     json.dump(all_descriptions, outfile, indent=2)
+
+tsv_dump = {"name":[], "val":[], "description":[]}
+for i in all_para.keys():
+    if len(all_para_li[i]) == 0:
+        val = ""
+    else:
+        val = all_para_li[i][0]
+    tmp = tsv_dump["name"]
+    tmp.append(i)
+    tsv_dump["name"] = tmp
+
+    tmp = tsv_dump["val"]
+    tmp.append(val)
+    tsv_dump["val"] = tmp
+
+    tmp = tsv_dump["description"]
+    tmp.append(all_descriptions[i])
+    tsv_dump["description"] = tmp
+
+df = pd.DataFrame(tsv_dump)
+
+df.to_csv("kylin-common-default.tsv",sep="\t",index=False,header=False)

@@ -3,9 +3,9 @@
     "/kylin"
   ],
   "kylin.env": [
-    "DEV",
     "PROD",
-    "QA"
+    "QA",
+    "DEV"
   ],
   "kylin.env.zookeeper-base-path": [
     "/kylin"
@@ -16,8 +16,8 @@
   ],
   "kylin.server.mode": [
     "query",
-    "all",
-    "job"
+    "job",
+    "all"
   ],
   "kylin.server.cluster-name": [],
   "kylin.job.scheduler.default": [
@@ -121,16 +121,16 @@
     "256"
   ],
   "kylin.source.hive.default-char-precision": [
-    "char",
-    "255"
+    "255",
+    "char"
   ],
   "kylin.source.hive.default-decimal-precision": [
-    "19",
-    "decimal"
+    "decimal",
+    "19"
   ],
   "kylin.source.hive.default-decimal-scale": [
-    "4",
-    "decimal"
+    "decimal",
+    "4"
   ],
   "kylin.cube.ignore-signature-inconsistency": [
     "FALSE"
@@ -164,8 +164,8 @@
   ],
   "kylin.cube.algorithm": [
     "auto",
-    "inmem",
-    "layer"
+    "layer",
+    "inmem"
   ],
   "kylin.cube.algorithm.layer-or-inmem-threshold": [
     "7"
@@ -242,8 +242,8 @@
     "1"
   ],
   "kylin.engine.mr.build-dict-in-reducer": [
-    "Extract Fact Table Distinct Columns",
-    "TRUE"
+    "TRUE",
+    "Extract Fact Table Distinct Columns"
   ],
   "kylin.engine.mr.yarn-check-interval-seconds": [
     "10"
@@ -510,9 +510,9 @@
     "stream_index"
   ],
   "kylin.stream.node": [
-    "null",
+    "port",
     "hostname:port",
-    "port"
+    "null"
   ],
   "kylin.stream.metadata.store.type": [
     "zk"
@@ -527,13 +527,13 @@
     "3"
   ],
   "kylin.stream.segment.retention.policy": [
-    "fullBuild",
     "purge",
+    "fullBuild",
     "IMMUTABLE"
   ],
   "kylin.stream.build.additional.cuboids": [
-    "Cube Advanced Setting",
-    "false"
+    "false",
+    "Cube Advanced Setting"
   ],
   "kylin.stream.cube.window": [
     "3600"
@@ -557,8 +557,8 @@
     "true"
   ],
   "kylin.stream.assigner": [
-    "DefaultAssigner",
-    "org.apache.kylin.stream.coordinator.assign.Assigner"
+    "org.apache.kylin.stream.coordinator.assign.Assigner",
+    "DefaultAssigner"
   ],
   "kylin.stream.coordinator.client.timeout.millsecond": [
     "5000"
@@ -618,14 +618,14 @@
     "TRUE"
   ],
   "kylin.query.calcite.extras-props.unquotedCasing": [
+    "TO_LOWER",
     "UNCHANGED",
-    "TO_UPPER",
-    "TO_LOWER"
+    "TO_UPPER"
   ],
   "kylin.query.calcite.extras-props.quoting": [
     "BACK_TICK",
-    "BRACKET",
-    "DOUBLE_QUOTE"
+    "DOUBLE_QUOTE",
+    "BRACKET"
   ],
   "kylin.query.statement-cache-max-num": [
     "50000"
@@ -730,8 +730,8 @@
     "FALSE"
   ],
   "kylin.security.profile": [
-    "testing",
     "saml",
+    "testing",
     "ldap"
   ],
   "kylin.security.ldap.connection-server": [
@@ -760,8 +760,8 @@
   ],
   "kylin.env.zookeeper.zk-acl": [
     "world:anyone:rwcda",
-    "world",
-    "anyone"
+    "anyone",
+    "world"
   ],
   "kylin.query.lazy-query-enabled": [
     "false"
