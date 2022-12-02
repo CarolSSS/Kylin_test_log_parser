@@ -96,8 +96,8 @@
   "kylin.source.hive.beeline-shell": [],
   "kylin.source.hive.beeline-params": [],
   "kylin.source.hive.enable-sparksql-for-table-ops": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.source.hive.sparksql-beeline-shell": [],
   "kylin.source.hive.sparksql-beeline-params": [],
@@ -121,16 +121,16 @@
     "256"
   ],
   "kylin.source.hive.default-char-precision": [
-    "255",
-    "char"
+    "char",
+    "255"
   ],
   "kylin.source.hive.default-decimal-precision": [
     "decimal",
     "19"
   ],
   "kylin.source.hive.default-decimal-scale": [
-    "decimal",
-    "4"
+    "4",
+    "decimal"
   ],
   "kylin.cube.ignore-signature-inconsistency": [
     "FALSE"
@@ -139,8 +139,8 @@
     "32768"
   ],
   "kylin.cube.aggrgroup.is-mandatory-only-valid": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.cube.rowkey.max-size": [
     "63"
@@ -163,8 +163,8 @@
     "0.5"
   ],
   "kylin.cube.algorithm": [
-    "auto",
     "layer",
+    "auto",
     "inmem"
   ],
   "kylin.cube.algorithm.layer-or-inmem-threshold": [
@@ -180,8 +180,8 @@
     "100"
   ],
   "kylin.cube.is-automerge-enabled": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.snapshot.max-mb": [
     "300"
@@ -242,8 +242,8 @@
     "1"
   ],
   "kylin.engine.mr.build-dict-in-reducer": [
-    "TRUE",
-    "Extract Fact Table Distinct Columns"
+    "Extract Fact Table Distinct Columns",
+    "TRUE"
   ],
   "kylin.engine.mr.yarn-check-interval-seconds": [
     "10"
@@ -279,8 +279,8 @@
     "TRUE"
   ],
   "kylin.engine.mr.build-uhc-dict-in-additional-step": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.engine.mr.uhc-reducer-count": [
     "1"
@@ -399,8 +399,8 @@
     "TRUE"
   ],
   "kylin.server.query-metrics2-enabled": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.metrics.reporter-query-enabled": [
     "TRUE"
@@ -527,9 +527,9 @@
     "3"
   ],
   "kylin.stream.segment.retention.policy": [
+    "IMMUTABLE",
     "purge",
-    "fullBuild",
-    "IMMUTABLE"
+    "fullBuild"
   ],
   "kylin.stream.build.additional.cuboids": [
     "false",
@@ -557,8 +557,8 @@
     "true"
   ],
   "kylin.stream.assigner": [
-    "org.apache.kylin.stream.coordinator.assign.Assigner",
-    "DefaultAssigner"
+    "DefaultAssigner",
+    "org.apache.kylin.stream.coordinator.assign.Assigner"
   ],
   "kylin.stream.coordinator.client.timeout.millsecond": [
     "5000"
@@ -618,14 +618,14 @@
     "TRUE"
   ],
   "kylin.query.calcite.extras-props.unquotedCasing": [
+    "TO_UPPER",
     "TO_LOWER",
-    "UNCHANGED",
-    "TO_UPPER"
+    "UNCHANGED"
   ],
   "kylin.query.calcite.extras-props.quoting": [
     "BACK_TICK",
-    "DOUBLE_QUOTE",
-    "BRACKET"
+    "BRACKET",
+    "DOUBLE_QUOTE"
   ],
   "kylin.query.statement-cache-max-num": [
     "50000"
@@ -637,8 +637,8 @@
     "FALSE"
   ],
   "kylin.query.enable-dynamic-column": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.storage.hbase.max-fuzzykey-scan": [
     "200"
@@ -650,8 +650,8 @@
     "1000000"
   ],
   "kylin.query.cache-enabled": [
-    "TRUE",
-    "true"
+    "true",
+    "TRUE"
   ],
   "kylin.query.cache-threshold-duration": [
     "2000"
@@ -719,15 +719,15 @@
     "-1"
   ],
   "kylin.storage.limit-push-down-enabled": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.query.flat-filter-max-children": [
     "500000"
   ],
   "kylin.server.query-metrics-enabled": [
-    "TRUE",
-    "FALSE"
+    "FALSE",
+    "TRUE"
   ],
   "kylin.security.profile": [
     "saml",
@@ -759,16 +759,16 @@
     "digest:ADMIN:KYLIN"
   ],
   "kylin.env.zookeeper.zk-acl": [
-    "world:anyone:rwcda",
     "anyone",
+    "world:anyone:rwcda",
     "world"
   ],
   "kylin.query.lazy-query-enabled": [
     "false"
   ],
   "kylin.query.cache-signature-enabled": [
-    "false",
-    "true"
+    "true",
+    "false"
   ],
   "kylin.query.segment-cache-enabled": [
     "false"

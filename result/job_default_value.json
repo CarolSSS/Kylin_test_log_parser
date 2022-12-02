@@ -1,0 +1,73 @@
+{
+  "kylin.metadata.url": [
+    "",
+    "kylin_metadata@hbase"
+  ],
+  "kylin.env.zookeeper-base-path": [
+    "/kylin"
+  ],
+  "kylin.server.cluster-name": [
+    "kylin_metadata"
+  ],
+  "kylin.env.zookeeper-base-sleep-time": [
+    "0"
+  ],
+  "kylin.env.zookeeper-max-retries": [
+    "3"
+  ],
+  "kylin.env.zookeeper-is-local": [
+    "true"
+  ],
+  "kylin.metadata.check-copy-on-write": [
+    "false"
+  ],
+  "kylin.resourcestore.reconnect-base-ms": [
+    "1000"
+  ],
+  "kylin.resourcestore.reconnect-max-ms": [
+    "60000"
+  ],
+  "kylin.metadata.sync-error-handler": [
+    "null"
+  ],
+  "kylin.server.cluster-servers": [
+    ""
+  ],
+  "kylin.source.hive.quote-enabled": [
+    "true"
+  ],
+  "kylin.fact.table.dialect": [
+    "hive"
+  ],
+  "kylin.job.max-concurrent-jobs": [
+    "20",
+    "10"
+  ],
+  "kylin.server.mode": [
+    "all"
+  ],
+  "kylin.job.scheduler.poll-interval-second": [
+    "1",
+    "30"
+  ],
+  "kylin.job.scheduler.priority-considered": [
+    "false"
+  ],
+  "kylin.job.scheduler.safemode": [
+    "false"
+  ],
+  "kylin.job.retry": [
+    "3",
+    "0"
+  ],
+  "kylin.job.execute-output.max-size": [
+    "10485760"
+  ],
+  "kylin.job.notification-admin-emails": [
+    "null"
+  ],
+  "kylin.job.retry-exception-classes": [
+    "null",
+    "java.io.FileNotFoundException"
+  ]
+}

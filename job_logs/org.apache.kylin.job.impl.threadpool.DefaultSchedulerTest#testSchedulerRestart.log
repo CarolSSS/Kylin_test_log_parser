@@ -1,0 +1,419 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-core-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ org.apache.kylin:kylin:4.0.3-SNAPSHOT, /Users/carolsong/kylin/pom.xml, line 1115, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-metadata:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 51, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-common:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 65, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-spark-query:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 144, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin-soft-affinity-cache:jar:4.0.3-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:build-helper-maven-plugin is missing. @ line 62, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.kylin:kylin:pom:4.0.3-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-sql_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1109, column 19
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.spark:spark-hive_${scala.binary.version}:jar -> duplicate declaration of version ${spark.version} @ line 1115, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.kylin:kylin-core-job >-------------------
+[INFO] Building Apache Kylin - Core Job 4.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ kylin-core-job ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (check-style) @ kylin-core-job ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-test) @ kylin-core-job ---
+[INFO] surefireArgLine set to -javaagent:/Users/carolsong/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/Users/carolsong/kylin/core-job/../target/jacoco.exec,append=true
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ kylin-core-job ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:resources (default-resources) @ kylin-core-job ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ kylin-core-job ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-jamm) @ kylin-core-job ---
+[INFO] Configured Artifact: com.github.jbellis:jamm:?:jar
+[INFO] com.github.jbellis:jamm:0.3.1:jar already exists in /Users/carolsong/kylin/core-job/target/test-classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ kylin-core-job ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/carolsong/kylin/core-job/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ kylin-core-job ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ kylin-core-job ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/carolsong/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2022-12-02 01:24:48,200 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+2022-12-02 01:24:48,724 INFO  [main] common.KylinConfig:118 : Loading kylin-defaults.properties from file:/Users/carolsong/.m2/repository/org/apache/kylin/kylin-core-common/4.0.3-SNAPSHOT/kylin-core-common-4.0.3-SNAPSHOT.jar!/kylin-defaults.properties
+2022-12-02 01:24:48,732 WARN  [main] common.KylinConfig:136 : [CTEST][LOAD-PARAM] Loading ctest.properties from file:/Users/carolsong/.m2/repository/org/apache/kylin/kylin-core-common/4.0.3-SNAPSHOT/kylin-core-common-4.0.3-SNAPSHOT.jar!/ctest.properties
+2022-12-02 01:24:48,750 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-12-02 01:24:48,777 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url 
+2022-12-02 01:24:49,064 WARN  [main] common.KylinConfigBase:293 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url.identifier : kylin_metadata
+2022-12-02 01:24:49,066 WARN  [main] common.KylinConfigBase:128 : KYLIN_HOME was not set
+2022-12-02 01:24:49,066 INFO  [main] common.KylinConfig:370 : Use KYLIN_CONF=../examples/test_metadata/
+2022-12-02 01:24:49,066 INFO  [main] common.KylinConfig:171 : Initialized a new KylinConfig from getInstanceFromEnv : 80052821
+2022-12-02 01:24:49,067 WARN  [main] common.KylinConfigBase:293 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.metadata.url : ../examples/test_metadata/
+2022-12-02 01:24:49,067 WARN  [main] common.KylinConfigBase:293 : [CTEST][SET-PARAM]: Kylin Config was updated with kylin.env.hdfs-working-dir : file:///tmp/kylin
+2022-12-02 01:24:49,131 INFO  [main] common.KylinConfig:505 : Creating new manager instance of class org.apache.kylin.job.execution.ExecutableManager
+2022-12-02 01:24:49,144 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-12-02 01:24:49,182 INFO  [main] execution.ExecutableManager:94 : Using metadata url: ../examples/test_metadata/
+2022-12-02 01:24:49,220 INFO  [main] common.KylinConfig:505 : Creating new manager instance of class org.apache.kylin.job.dao.ExecutableDao
+2022-12-02 01:24:49,222 WARN  [main] common.KylinConfigBase:83 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-12-02 01:24:49,224 INFO  [main] dao.ExecutableDao:83 : Using metadata url: ../examples/test_metadata/
+2022-12-02 01:24:49,225 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-12-02 01:24:49,226 INFO  [main] persistence.ResourceStore:90 : Using metadata url ../examples/test_metadata/ for resource store
+2022-12-02 01:24:49,233 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.url ../examples/test_metadata/
+2022-12-02 01:24:49,242 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.check-copy-on-write false
+2022-12-02 01:24:49,245 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:49,246 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:49,310 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.check-copy-on-write false
+2022-12-02 01:24:49,310 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:49,310 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:49,328 INFO  [main] common.KylinConfig:505 : Creating new manager instance of class org.apache.kylin.metadata.cachesync.Broadcaster
+2022-12-02 01:24:49,335 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.metadata.sync-error-handler null
+2022-12-02 01:24:49,337 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:49,338 WARN  [main] cachesync.Broadcaster:100 : There is no available rest server; check the 'kylin.server.cluster-servers' config
+2022-12-02 01:24:49,354 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.mode all
+2022-12-02 01:24:49,355 INFO  [main] threadpool.DefaultScheduler:141 : Initializing Job Engine ....
+2022-12-02 01:24:49,355 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:49,360 INFO  [main] threadpool.DefaultScheduler:162 : Starting resume all running jobs.
+2022-12-02 01:24:49,360 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:49,360 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:49,361 INFO  [main] threadpool.DefaultScheduler:165 : Finishing resume all running jobs.
+2022-12-02 01:24:49,364 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.scheduler.poll-interval-second 1
+2022-12-02 01:24:49,365 INFO  [main] threadpool.DefaultScheduler:169 : Fetching jobs every 1 seconds
+2022-12-02 01:24:49,367 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.scheduler.priority-considered false
+2022-12-02 01:24:49,379 INFO  [main] threadpool.DefaultScheduler:179 : Creating fetcher pool instance:1532874332
+2022-12-02 01:24:49,379 INFO  [main] threadpool.DefaultSchedulerTest:201 : testSchedulerRestart
+2022-12-02 01:24:49,388 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:49,394 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:49,396 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:49,416 INFO  [FetcherRunner 1532874332-16] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 0 should running, 0 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:50,269 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,270 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,314 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:50,315 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,315 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,318 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,318 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,328 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,328 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,329 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:50,384 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:50,384 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:50,430 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,431 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,509 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,509 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,513 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.scheduler.safemode false
+2022-12-02 01:24:50,514 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,514 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,515 INFO  [FetcherRunner 1532874332-16] threadpool.FetcherRunner:65 : DefaultChainedExecutable{id=9329213b-8f57-7a85-ae82-b5ca83a40c24, name=null, state=READY} prepare to schedule and its priority is 10
+2022-12-02 01:24:50,518 INFO  [FetcherRunner 1532874332-16] threadpool.FetcherRunner:69 : DefaultChainedExecutable{id=9329213b-8f57-7a85-ae82-b5ca83a40c24, name=null, state=READY} scheduled
+2022-12-02 01:24:50,518 INFO  [FetcherRunner 1532874332-16] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 0 should running, 1 actual running, 0 stopped, 1 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:50,521 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:188 : Executing AbstractExecutable (null)
+2022-12-02 01:24:50,521 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,522 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,523 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,523 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,533 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.ExecutableManager:678 : job id:9329213b-8f57-7a85-ae82-b5ca83a40c24 from READY to RUNNING
+2022-12-02 01:24:50,535 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,535 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,540 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:50,543 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,543 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,544 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,544 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,545 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:50,545 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,545 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,545 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:50,546 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,546 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,547 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,547 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,548 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,548 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,548 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,548 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,549 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:188 : Executing AbstractExecutable (null)
+2022-12-02 01:24:50,549 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,549 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,551 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,551 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,551 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:50,551 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,551 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,552 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,553 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,554 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,554 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,554 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.ExecutableManager:678 : job id:9329213b-8f57-7a85-ae82-b5ca83a40c24-00 from READY to RUNNING
+2022-12-02 01:24:50,554 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,554 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,555 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,555 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,556 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,557 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,557 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:50,558 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,558 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:50,562 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:50,562 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:51,389 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:51,391 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:51,392 INFO  [FetcherRunner 1532874332-16] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:52,385 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:52,391 WARN  [FetcherRunner 1532874332-16] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:52,391 INFO  [FetcherRunner 1532874332-16] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:53,336 INFO  [main] threadpool.DefaultScheduler:186 : Shutting down DefaultScheduler ....
+2022-12-02 01:24:53,381 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.retry 0
+2022-12-02 01:24:53,389 ERROR [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:140 : 1th retries for onExecuteFinished fails due to {}
+java.lang.RuntimeException: Current thread is interrupted, aborting
+	at org.apache.kylin.job.execution.ExecutableManager.addJobInfo(ExecutableManager.java:840)
+	at org.apache.kylin.job.execution.ExecutableManager.addJobInfo(ExecutableManager.java:880)
+	at org.apache.kylin.job.execution.AbstractExecutable.addExtraInfo(AbstractExecutable.java:488)
+	at org.apache.kylin.job.execution.AbstractExecutable.setEndTime(AbstractExecutable.java:504)
+	at org.apache.kylin.job.execution.AbstractExecutable.onExecuteFinished(AbstractExecutable.java:161)
+	at org.apache.kylin.job.execution.AbstractExecutable.onExecuteFinishedWithRetry(AbstractExecutable.java:138)
+	at org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:228)
+	at org.apache.kylin.job.execution.DefaultChainedExecutable.doWork(DefaultChainedExecutable.java:94)
+	at org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:206)
+	at org.apache.kylin.job.impl.threadpool.DefaultScheduler$JobRunner.run(DefaultScheduler.java:113)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-12-02 01:24:53,394 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,394 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,398 ERROR [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:210 : error running Executable: DefaultChainedExecutable{id=9329213b-8f57-7a85-ae82-b5ca83a40c24, name=null, state=RUNNING}
+2022-12-02 01:24:53,399 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.retry 0
+2022-12-02 01:24:53,399 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,399 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,400 INFO  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:53,400 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,400 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,401 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,401 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,401 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,401 WARN  [Scheduler 959750297 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-17] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,402 ERROR [pool-3-thread-1] threadpool.DefaultScheduler:115 : ExecuteException job:9329213b-8f57-7a85-ae82-b5ca83a40c24
+org.apache.kylin.job.exception.ExecuteException: java.lang.RuntimeException: Current thread is interrupted, aborting
+	at org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:234)
+	at org.apache.kylin.job.impl.threadpool.DefaultScheduler$JobRunner.run(DefaultScheduler.java:113)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: Current thread is interrupted, aborting
+	at org.apache.kylin.job.execution.ExecutableManager.addJobInfo(ExecutableManager.java:840)
+	at org.apache.kylin.job.execution.ExecutableManager.addJobInfo(ExecutableManager.java:880)
+	at org.apache.kylin.job.execution.AbstractExecutable.onExecuteError(AbstractExecutable.java:174)
+	at org.apache.kylin.job.execution.DefaultChainedExecutable.onExecuteError(DefaultChainedExecutable.java:115)
+	at org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:224)
+	... 4 more
+2022-12-02 01:24:53,403 INFO  [main] threadpool.DefaultScheduler:186 : Shutting down DefaultScheduler ....
+2022-12-02 01:24:53,403 INFO  [main] threadpool.DefaultScheduler:141 : Initializing Job Engine ....
+2022-12-02 01:24:53,404 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:53,404 INFO  [main] threadpool.DefaultScheduler:162 : Starting resume all running jobs.
+2022-12-02 01:24:53,404 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,404 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+Exception in thread "pool-3-thread-1" java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@47bfdb0d rejected from java.util.concurrent.ScheduledThreadPoolExecutor@485ad8bc[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 4]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.apache.kylin.job.impl.threadpool.DefaultScheduler$JobRunner.run(DefaultScheduler.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-12-02 01:24:53,414 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,415 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,418 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,419 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,419 INFO  [main] threadpool.DefaultScheduler:165 : Finishing resume all running jobs.
+2022-12-02 01:24:53,419 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:53,419 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.scheduler.poll-interval-second 1
+2022-12-02 01:24:53,420 INFO  [main] threadpool.DefaultScheduler:169 : Fetching jobs every 1 seconds
+2022-12-02 01:24:53,420 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.scheduler.priority-considered false
+2022-12-02 01:24:53,420 INFO  [main] threadpool.DefaultScheduler:179 : Creating fetcher pool instance:578798370
+2022-12-02 01:24:53,421 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:53,422 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:53,422 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,422 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,426 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,426 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,427 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.scheduler.safemode false
+2022-12-02 01:24:53,427 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,427 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,429 INFO  [FetcherRunner 578798370-18] threadpool.FetcherRunner:65 : DefaultChainedExecutable{id=9329213b-8f57-7a85-ae82-b5ca83a40c24, name=null, state=READY} prepare to schedule and its priority is 10
+2022-12-02 01:24:53,429 INFO  [FetcherRunner 578798370-18] threadpool.FetcherRunner:69 : DefaultChainedExecutable{id=9329213b-8f57-7a85-ae82-b5ca83a40c24, name=null, state=READY} scheduled
+2022-12-02 01:24:53,429 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 0 should running, 1 actual running, 0 stopped, 1 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:53,432 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.AbstractExecutable:188 : Executing AbstractExecutable (null)
+2022-12-02 01:24:53,433 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,433 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,435 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,437 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,442 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.ExecutableManager:678 : job id:9329213b-8f57-7a85-ae82-b5ca83a40c24 from READY to RUNNING
+2022-12-02 01:24:53,442 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,442 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,443 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:53,448 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,448 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,451 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,453 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,455 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:53,455 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,455 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,456 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:53,456 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,457 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,457 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,457 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,458 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,458 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,460 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,461 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,467 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.AbstractExecutable:188 : Executing AbstractExecutable (null)
+2022-12-02 01:24:53,467 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,467 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,469 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,469 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,469 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:53,469 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,470 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,470 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,470 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,473 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,473 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,473 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.ExecutableManager:678 : job id:9329213b-8f57-7a85-ae82-b5ca83a40c24-00 from READY to RUNNING
+2022-12-02 01:24:53,474 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,474 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,475 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,475 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,476 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,476 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,480 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.AbstractExecutable:417 : The state of job is:RUNNING
+2022-12-02 01:24:53,480 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,480 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:53,481 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:53,481 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:54,446 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:54,446 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:54,448 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:54,448 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:54,448 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:54,452 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:54,452 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:55,430 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:55,434 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:55,434 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:55,458 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:55,459 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:55,472 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:55,473 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:56,430 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:56,435 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:56,436 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:56,496 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:56,501 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:56,514 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:56,516 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:57,432 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:57,438 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:57,438 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:57,525 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:57,528 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:57,546 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:57,547 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,424 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:58,425 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:58,426 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 1 should running, 1 actual running, 0 stopped, 0 ready, 0 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:58,484 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.retry 0
+2022-12-02 01:24:58,486 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,489 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,501 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,503 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,510 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,512 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,517 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,519 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,523 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,524 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,524 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.ExecutableManager:678 : job id:9329213b-8f57-7a85-ae82-b5ca83a40c24-00 from RUNNING to SUCCEED
+2022-12-02 01:24:58,524 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.execute-output.max-size 10485760
+2022-12-02 01:24:58,525 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,525 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,526 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.retry 0
+2022-12-02 01:24:58,526 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,526 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,527 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,527 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,529 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,531 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,532 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,532 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,532 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,532 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,534 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,534 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,534 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,535 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,535 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:58,535 INFO  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] execution.ExecutableManager:678 : job id:9329213b-8f57-7a85-ae82-b5ca83a40c24 from RUNNING to SUCCEED
+2022-12-02 01:24:58,535 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,535 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,535 WARN  [pool-1-thread-1] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.server.cluster-servers 
+2022-12-02 01:24:58,535 WARN  [Scheduler 17665553 Job 9329213b-8f57-7a85-ae82-b5ca83a40c24-19] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.notification-admin-emails null
+2022-12-02 01:24:58,537 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:58,538 WARN  [FetcherRunner 578798370-18] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.job.max-concurrent-jobs 10
+2022-12-02 01:24:58,538 INFO  [FetcherRunner 578798370-18] threadpool.DefaultFetcherRunner:117 : Job Fetcher: 0 should running, 0 actual running, 0 stopped, 0 ready, 1 already succeed, 0 error, 0 discarded, 0 others
+2022-12-02 01:24:58,548 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,550 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,554 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,555 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,555 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,555 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,556 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-base-ms 1000
+2022-12-02 01:24:58,556 WARN  [main] common.KylinConfigBase:195 : [CTEST][GET-PARAM] kylin.resourcestore.reconnect-max-ms 60000
+2022-12-02 01:24:58,559 INFO  [main] threadpool.DefaultScheduler:186 : Shutting down DefaultScheduler ....
+2022-12-02 01:24:58,707 INFO  [main] common.KylinConfig:189 : Destroy KylinConfig
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.01 s - in org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-test) @ kylin-core-job ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  37.870 s
+[INFO] Finished at: 2022-12-01T19:24:59-06:00
+[INFO] ------------------------------------------------------------------------

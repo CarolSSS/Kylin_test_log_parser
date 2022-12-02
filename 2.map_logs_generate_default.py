@@ -5,8 +5,8 @@ import json
 
 # Map log files from common_logs
 SUF_LEN = len(".log")
-LOG = "query_logs"
-NAME = "query"
+LOG = "storage_logs"
+NAME = "storage"
 
 all_value = dict()
 # LOG = "cube_logs"

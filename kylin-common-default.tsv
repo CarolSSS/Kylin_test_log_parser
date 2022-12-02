@@ -33,7 +33,7 @@ kylin.metadata.jdbc.max-cell-size	1	The default value is 1 (MB)
 kylin.source.hive.client	cli	specifies the Hive command line type. Optional values include cli or beeline. The default value is cli.
 kylin.source.hive.beeline-shell		specifies the absolute path of the Beeline shell. The default is beeline
 kylin.source.hive.beeline-params		when using Beeline as the Client tool for Hive, user need to configure this parameter to provide more information to Beeline
-kylin.source.hive.enable-sparksql-for-table-ops	TRUE	the default value is FALSE, which needs to be set to TRUE when using SparkSQL
+kylin.source.hive.enable-sparksql-for-table-ops	FALSE	the default value is FALSE, which needs to be set to TRUE when using SparkSQL
 kylin.source.hive.sparksql-beeline-shell		when using SparkSQL Beeline as the client tool for Hive, user need to configure this parameter as /path/to/spark-client/bin/beeline
 kylin.source.hive.sparksql-beeline-params		when using SparkSQL Beeline as the Client tool for Hive,user need to configure this parameter to provide more information to SparkSQL
 kylin.source.default		specifies the type of data source used by JDBC
@@ -46,12 +46,12 @@ kylin.source.jdbc.sqoop-home		specifies Sqoop installation path
 kylin.source.jdbc.sqoop-mapper-num	4	specifies how many slices should be split. Sqoop will run a mapper for each slice. The default value is 4.
 kylin.source.jdbc.field-delimiter	\	specifies the field separator. The default value is \
 kylin.source.hive.default-varchar-precision	varchar	specifies the maximum length of the varchar field. The default value is 256.
-kylin.source.hive.default-char-precision	255	specifies the maximum length of the char field. The default value is 255.
+kylin.source.hive.default-char-precision	char	specifies the maximum length of the char field. The default value is 255.
 kylin.source.hive.default-decimal-precision	decimal	specifies the precision of the decimal field. The default value is 19
-kylin.source.hive.default-decimal-scale	decimal	specifies the scale of the decimal field. The default value is 4.
+kylin.source.hive.default-decimal-scale	4	specifies the scale of the decimal field. The default value is 4.
 kylin.cube.ignore-signature-inconsistency	FALSE	The signature in Cube desc ensures that the cube is not changed to a corrupt state. The default value is FALSE
 kylin.cube.aggrgroup.max-combination	32768	specifies the max combination number of aggregation groups. The default value is 32768.
-kylin.cube.aggrgroup.is-mandatory-only-valid	TRUE	whether to allow Cube contains only Base Cuboid. The default value is FALSE, set to TRUE when using Spark Cubing
+kylin.cube.aggrgroup.is-mandatory-only-valid	FALSE	whether to allow Cube contains only Base Cuboid. The default value is FALSE, set to TRUE when using Spark Cubing
 kylin.cube.rowkey.max-size	63	specifies the maximum number of columns that can be set to Rowkeys. The default value is 63, and it can not be more than 63.
 kylin.cube.allow-appear-in-multiple-projects		whether to allow a cube to appear in multiple projects
 kylin.cube.gtscanrequest-serialization-level	1	the default value is 1
@@ -60,12 +60,12 @@ kylin.cube.size-estimate-ratio	0.25	normal cube, default value is 0.25
 kylin.cube.size-estimate-memhungry-ratio		Deprecated, default is 0.05
 kylin.cube.size-estimate-countdistinct-ratio	0.5	Cube Size Estimation with count distinct h= metric, default value is 0.5
 kylin.cube.size-estimate-topn-ratio	0.5	Cube Size Estimation with TopN metric, default value is 0.5
-kylin.cube.algorithm	auto	specifies the algorithm of the Build Cube. Optional values include auto, layer and inmem. The default value is auto, that is, Kylin will dynamically select an algorithm by collecting data ( Layer or inmem), if user knows Kylin, user data and cluster condition well, user can directly set the algorithm.
+kylin.cube.algorithm	layer	specifies the algorithm of the Build Cube. Optional values include auto, layer and inmem. The default value is auto, that is, Kylin will dynamically select an algorithm by collecting data ( Layer or inmem), if user knows Kylin, user data and cluster condition well, user can directly set the algorithm.
 kylin.cube.algorithm.layer-or-inmem-threshold	7	the default value is 7
 kylin.cube.algorithm.inmem-split-limit	500	the default value is 500
 kylin.cube.algorithm.inmem-concurrent-threads	1	the default value is 1
 kylin.job.sampling-percentage	100	specifies the data sampling percentage. The default value is 100.
-kylin.cube.is-automerge-enabled	TRUE	whether to enable auto-merge. The default value is TRUE. When this parameter is set to FALSE, the auto-merge function will be turned off, even if it is enabled in Cube Design.
+kylin.cube.is-automerge-enabled	FALSE	whether to enable auto-merge. The default value is TRUE. When this parameter is set to FALSE, the auto-merge function will be turned off, even if it is enabled in Cube Design.
 kylin.snapshot.max-mb	300	specifies the max size of the snapshot. The default value is 300(M)
 kylin.snapshot.max-cache-entry	500	The maximum number of snapshots that can be stored in the cache. The default value is 500.
 kylin.snapshot.ext.shard-mb	500	specifies the size of HBase shard. The default value is 500(M).
@@ -88,7 +88,7 @@ kylin.engine.mr.min-reducer-number		specifies the minimum number of Reducers in 
 kylin.engine.mr.max-reducer-number		specifies the maximum number of Reducers in the MapReduce job. The default is 500.
 kylin.engine.mr.mapper-input-rows	1000000	specifies the number of rows that each Mapper can handle. The default value is 1000000. If user change this value, it will start more Mapper.
 kylin.engine.mr.max-cuboid-stats-calculator-number	1	specifies the number of threads used to calculate Cube statistics. The default value is 1
-kylin.engine.mr.build-dict-in-reducer	TRUE	whether to build the dictionary in the Reduce phase of the build job Extract Fact Table Distinct Columns. The default value is TRUE
+kylin.engine.mr.build-dict-in-reducer	Extract Fact Table Distinct Columns	whether to build the dictionary in the Reduce phase of the build job Extract Fact Table Distinct Columns. The default value is TRUE
 kylin.engine.mr.yarn-check-interval-seconds	10	How often the build engine is checked for the status of the Hadoop job. The default value is 10(s)
 kylin.engine.mr.use-local-classpath	TRUE	whether to use local mapreduce application classpath. The default value is TRUE
 kylin.dictionary.use-forest-trie	TRUE	The default value is TRUE
@@ -100,7 +100,7 @@ kylin.dictionary.append-max-versions	3	The default value is 3
 kylin.dictionary.append-version-ttl	259200000	The default value is 259200000
 kylin.dictionary.resuable	FALSE	whether to reuse the dictionary. The default value is FALSE
 kylin.dictionary.shrunken-from-global-enabled	TRUE	whether to reduce the size of global dictionary. The default value is TRUE
-kylin.engine.mr.build-uhc-dict-in-additional-step	TRUE	the default value is FALSE, set to TRUE
+kylin.engine.mr.build-uhc-dict-in-additional-step	FALSE	the default value is FALSE, set to TRUE
 kylin.engine.mr.uhc-reducer-count	1	the default value is 1, which can be set to 5 to allocate 5 Reducers for each super-high base column.
 kylin.engine.spark-conf.spark.master	yarn	specifies the Spark operation mode. The default value is yarn
 kylin.engine.spark-conf.spark.submit.deployMode	cluster	specifies the deployment mode of Spark on YARN. The default value is cluster
@@ -149,7 +149,7 @@ kylin.job.notification-mail-password		specifies the username and password of the
 kylin.job.notification-mail-sender		specifies the email address of the email
 kylin.job.notification-admin-emails		specifies the administrator’s mailbox for email notifications
 kylin.cube.cubeplanner.enabled	TRUE	whether to enable Cube Planner, The default value is TRUE
-kylin.server.query-metrics2-enabled	TRUE	the default value is FALSE, set to TRUE to collect query metrics into dropwizard
+kylin.server.query-metrics2-enabled	FALSE	the default value is FALSE, set to TRUE to collect query metrics into dropwizard
 kylin.metrics.reporter-query-enabled	TRUE	the default value is TRUE
 kylin.metrics.reporter-job-enabled	TRUE	the default value is TRUE
 kylin.metrics.monitor-enabled	TRUE	the default value is TRUE
@@ -192,7 +192,7 @@ kylin.stream.metadata.store.type	zk	specifies the position of metadata store. Th
 kylin.stream.receiver.use-threads-per-query	8	specifies the threads number that each query use. The default value is 8.
 kylin.stream.index.maxrows	50000	specifies the maximum number of the aggregated event keep in JVM heap. The default value is 50000. Try to advance it if you have enough heap size.
 kylin.stream.cube-num-of-consumer-tasks	3	specifies the number of replica sets that share the whole topic partition. It affects how many partitions will be assigned to different replica sets. The default value is 3.
-kylin.stream.segment.retention.policy	purge	specifies the strategy to process local segment cache when segment become IMMUTABLE. Optional values include purge and fullBuild. purge means when the segment become IMMUTABLE, it will be deleted. fullBuild means when the segment become IMMUTABLE, it will be uploaded to HDFS. The default value is fullBuild.
+kylin.stream.segment.retention.policy	IMMUTABLE	specifies the strategy to process local segment cache when segment become IMMUTABLE. Optional values include purge and fullBuild. purge means when the segment become IMMUTABLE, it will be deleted. fullBuild means when the segment become IMMUTABLE, it will be uploaded to HDFS. The default value is fullBuild.
 kylin.stream.build.additional.cuboids	false	whether to build additional Cuboids. The additional Cuboids mean the aggregation of Mandatory Dimensions that chosen in Cube Advanced Setting page. The default value is false. Only build Base Cuboid by default. Try to enable it if you care the QPS and most query pattern can be foresaw.
 kylin.stream.cube.window	3600	specifies the length of duration of each segment, value in seconds. The default value is 3600. Please check detail atdeep-dive-real-time-olap.
 kylin.stream.cube.duration	7200	specifies the wait time that a segment’s status changes from active to IMMUTABLE, value in seconds. The default value is 7200. Please check detail atdeep-dive-real-time-olap.
@@ -201,7 +201,7 @@ kylin.stream.checkpoint.file.max.num	5	specifies the maximum number of checkpoin
 kylin.stream.index.checkpoint.intervals	300	specifies the time interval between setting two checkpoints. The default value is 300.
 kylin.stream.immutable.segments.max.num	100	specifies the maximum number of the IMMUTABLE segment in each Cube of the current streaming receiver, if exceed, consumption of current topic will be paused. The default value is 100.
 kylin.stream.consume.offsets.latest	true	whether to consume from the latest offset or the earliest offset. The default value is true.
-kylin.stream.assigner	org.apache.kylin.stream.coordinator.assign.Assigner	specifies the implementation class which used to assign the topic partition to different replica sets. The class should be the implementation class of org.apache.kylin.stream.coordinator.assign.Assigner. The default value is DefaultAssigner.
+kylin.stream.assigner	DefaultAssigner	specifies the implementation class which used to assign the topic partition to different replica sets. The class should be the implementation class of org.apache.kylin.stream.coordinator.assign.Assigner. The default value is DefaultAssigner.
 kylin.stream.coordinator.client.timeout.millsecond	5000	specifies the connection timeout of the coordinator client. The default value is 5000.
 kylin.stream.receiver.client.timeout.millsecond	5000	specifies the connection timeout of the receiver client. The default value is 5000.
 kylin.stream.receiver.http.max.threads	200	specifies the maximum connection threads of the receiver. The default value is 200.
@@ -222,16 +222,16 @@ kylin.query.security-enabled	TRUE	whether to check the ACL when querying. The de
 kylin.query.security.table-acl-enabled	TRUE	whether to check the ACL of the corresponding table when querying. The default value is TRUE
 kylin.query.calcite.extras-props.conformance	LENIENT	whether to strictly parsed. The default value is LENIENT
 kylin.query.calcite.extras-props.caseSensitive	TRUE	whether is case sensitive. The default value is TRUE
-kylin.query.calcite.extras-props.unquotedCasing	TO_LOWER	optional values include UNCHANGED, TO_UPPER and TO_LOWER. The default value is TO_UPPER, that is, all uppercase
+kylin.query.calcite.extras-props.unquotedCasing	TO_UPPER	optional values include UNCHANGED, TO_UPPER and TO_LOWER. The default value is TO_UPPER, that is, all uppercase
 kylin.query.calcite.extras-props.quoting	BACK_TICK	whether to add quotes, Optional values include DOUBLE_QUOTE, BACK_TICK and BRACKET. The default value is DOUBLE_QUOTE
 kylin.query.statement-cache-max-num	50000	specifies the maximum number of cached PreparedStatements. The default value is 50000
 kylin.query.statement-cache-max-num-per-key	50	specifies the maximum number of PreparedStatements per key cache. The default value is 50.
 kylin.query.enable-dict-enumerator	FALSE	whether to enable the dictionary enumerator. The default value is FALSE
-kylin.query.enable-dynamic-column	TRUE	whether to enable dynamic columns. The default value is FALSE, set to TRUE to query the number of rows in a column that do not contain NULL
+kylin.query.enable-dynamic-column	FALSE	whether to enable dynamic columns. The default value is FALSE, set to TRUE to query the number of rows in a column that do not contain NULL
 kylin.storage.hbase.max-fuzzykey-scan	200	specifies the threshold for the scanned fuzzy key. If the value is exceeded, the fuzzy key will not be scanned. The default value is 200.
 kylin.storage.hbase.max-fuzzykey-scan-split	1	split the large fuzzy key set to reduce the number of fuzzy keys per scan. The default value is 1
 kylin.storage.hbase.max-visit-scanrange	1000000	the default value is 1000000
-kylin.query.cache-enabled	TRUE	
+kylin.query.cache-enabled	true	
 kylin.query.cache-threshold-duration	2000	the query duration exceeding the threshold is saved in the cache. The default value is 2000 (ms).
 kylin.query.cache-threshold-scan-count	10240	the row count scanned in the query exceeding the threshold is saved in the cache. The default value is 10240 (rows).
 kylin.query.cache-threshold-scan-bytes	1048576	the bytes scanned in the query exceeding the threshold is saved in the cache. The default value is 1048576 (byte).
@@ -255,9 +255,9 @@ kylin.query.pushdown.jdbc.pool-min-idle	0	the default value is 0
 kylin.query.pushdown.update-enabled	FALSE	specifies whether to enable update in Query Pushdown. The default value is FALSE
 kylin.query.pushdown.cache-enabled	FALSE	whether to enable the cache of the pushdown query to improve the query efficiency of the same query. The default value is FALSE
 kylin.query.force-limit	-1	this parameter achieves the purpose of shortening the query duration by forcing a LIMIT clause for the select * statement. The default value is -1, and the parameter value is set to a positive integer, such as 1000, the value will be applied to the LIMIT clause, and the query will eventually be converted to select * from fact_table limit 1000
-kylin.storage.limit-push-down-enabled	TRUE	the default value is TRUE, set to FALSE to close the limit-pushdown of storage layer
+kylin.storage.limit-push-down-enabled	FALSE	the default value is TRUE, set to FALSE to close the limit-pushdown of storage layer
 kylin.query.flat-filter-max-children	500000	specifies the maximum number of filters when flatting filter. The default value is 500000
-kylin.server.query-metrics-enabled	TRUE	the default value is FALSE, set to TRUE to collect query metrics to JMX
+kylin.server.query-metrics-enabled	FALSE	the default value is FALSE, set to TRUE to collect query metrics to JMX
 kylin.security.profile	saml	specifies the way of security authentication, optional values include ldap, testing, saml, it should be set to ldap when integrating LDAP for SSO
 kylin.security.ldap.connection-server	ldap://ldap_server:389	specifies LDAP server, such as ldap
 kylin.security.ldap.connection-username		specifies LDAP username
@@ -275,8 +275,8 @@ kylin.server.auth-user-cache.max-entries		specifies maximum number of LDAP users
 kylin.server.external-acl-provider	org.apache.ranger.authorization.kylin.authorizer.RangerKylinAuthorizer	
 kylin.env.zookeeper-acl-enabled	FALSE	Enable ZooKeeper ACL to prevent unauthorized users from accessing the Znode or reducing the risk of bad operations resulting from this. The default value is FALSE
 kylin.env.zookeeper.zk-auth	digest:ADMIN:KYLIN	use username
-kylin.env.zookeeper.zk-acl	world:anyone:rwcda	Use a single ID as the ACL identifier. The default value is world
+kylin.env.zookeeper.zk-acl	anyone	Use a single ID as the ACL identifier. The default value is world
 kylin.query.lazy-query-enabled	false	whether to lazily answer the queries that be sent repeatedly in a short time (hold it until the previous query be returned, and then reuse the result); The default value is false.
-kylin.query.cache-signature-enabled	false	whether to use the signature of a query to determine the cache’s validity. The signature is calculated by the cube/hybrid list of the project, their last build time and other information (at the moment when cache is persisted); It’s default value is false, highly recommend to set it to true.
+kylin.query.cache-signature-enabled	true	whether to use the signature of a query to determine the cache’s validity. The signature is calculated by the cube/hybrid list of the project, their last build time and other information (at the moment when cache is persisted); It’s default value is false, highly recommend to set it to true.
 kylin.query.segment-cache-enabled	false	whether to cache the segment level returned data (from HBase storage) into Memcached. This feature is mainly for the cube that built very frequently (e.g, streaming cube, whose last build time always changed a couple minutes, the whole SQL statement level cache is very likely be cleaned; in this case, the by-segment cache can reduce the I/O). This only works when Memcached configured, the default value is false.
 kylin.cache.memcached.hosts		a list of memcached node and port, connected with comma.

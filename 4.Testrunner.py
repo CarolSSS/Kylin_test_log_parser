@@ -22,13 +22,16 @@ sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 
 def run_ctest(module_name, test_name, config_parameter, config_value):
     inject(config_parameter, config_value)
+    
     if module_name == "query":
         command = "mvn -pl " + module_name + " test -Dtest=" + test_name
     else:
+        
         command = "mvn -pl core-" + module_name + " test -Dtest=" + test_name
     os.chdir(working_dir)
     print("[ctest]--> change dir to " + working_dir)
     print("[ctest]--> run command : " + command)
+    os.system("mvn clean install -pl core-common -DskipTests") # build the core-common module
     with os.popen(command) as output:
         if "[INFO] BUILD SUCCESS\n" in output.readlines():
             result = "PASS"
@@ -104,7 +107,7 @@ def main():
 
 
 if __name__ == "__main__":
-    module = "common"
+    module = "storage"
     # testName = "KylinServerDiscoveryTest#test"
     # param = "kylin.job.remote-cli-password"
     # value = ""

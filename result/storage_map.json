@@ -1,0 +1,50 @@
+{
+  "org.apache.kylin.storage.hybrid.HybridManagerTest#testBasics": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.metadata.realization-providers",
+    "kylin.metadata.data-model-impl",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.url",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.source.hive.default-decimal-precision",
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.metadata.sync-error-handler",
+    "kylin.cube.cuboid-scheduler",
+    "kylin.source.hive.default-decimal-scale",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.cube.segment-advisor",
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.cube.rowkey.max-size"
+  ],
+  "org.apache.kylin.storage.translate.FuzzyValueCombinationTest#testAllNulls": [
+    "kylin.metadata.url",
+    "kylin.source.hive.default-varchar-precision"
+  ],
+  "org.apache.kylin.storage.translate.FuzzyValueCombinationTest#testSomeNull": [
+    "kylin.metadata.url",
+    "kylin.source.hive.default-varchar-precision"
+  ],
+  "org.apache.kylin.storage.StorageFactoryTest#testSingleThread": [
+    "kylin.metadata.url",
+    "kylin.stream.settled.storage",
+    "kylin.storage.provider.0"
+  ],
+  "org.apache.kylin.storage.StorageFactoryTest#testMultipleThread": [
+    "kylin.metadata.url",
+    "kylin.stream.settled.storage",
+    "kylin.storage.provider.0"
+  ],
+  "org.apache.kylin.storage.translate.FuzzyValueCombinationTest#testCap": [
+    "kylin.metadata.url",
+    "kylin.source.hive.default-varchar-precision"
+  ],
+  "org.apache.kylin.storage.translate.FuzzyValueCombinationTest#testBasics": [
+    "kylin.metadata.url",
+    "kylin.source.hive.default-varchar-precision"
+  ]
+}

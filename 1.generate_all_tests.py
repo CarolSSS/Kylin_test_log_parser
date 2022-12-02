@@ -5,22 +5,19 @@ import os
 PRE_LEN = len("../")
 SUF_LEN = len(".java")
 THRESHOLD = len('Test.java')
-MODULE_NAME = "server"
-LOG_FILE = "server_logs"
-name = "server"
+MODULE_NAME = "tool"
+LOG_FILE = "tool_logs"
+name = "tool"
 
 # MODULE_NAME = "core-cube"
 # LOG_FILE = "cube_logs"
 # name = "cube"
-
-
 def writeCommandsTests(module, log, name):
     all_tests = []
     match_dir = []
     all = os.walk("../kylin/"+module+"/src/test/java/org/apache/kylin/"+name)
-    
+
     for x in all:
-        print(all)
         testname = x[2]
         dir = x[0]
         dir_cleaned = dir[PRE_LEN:].replace("/", ".") + "."
@@ -33,7 +30,8 @@ def writeCommandsTests(module, log, name):
                 match_dir.append(dir +"/"+ i)
                 fullName = dir_cleaned + i[:len(i) - SUF_LEN]
                 all_tests.append(fullName)
-
+    print(all_tests)
+    print(match_dir)
     all_names = []
     all_commands = []
     for ind, i in enumerate(match_dir):

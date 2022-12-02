@@ -115,5 +115,7 @@ for i in all_para.keys():
     tsv_dump["description"] = tmp
 
 df = pd.DataFrame(tsv_dump)
+df2 = pd.DataFrame({"name":tsv_dump["name"]})
 
 df.to_csv("kylin-common-default.tsv",sep="\t",index=False,header=False)
+df2.to_csv("conf_params.txt",sep="\t",index=False,header=False)

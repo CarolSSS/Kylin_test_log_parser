@@ -1,0 +1,280 @@
+{
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testLockCurrentThread": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.ExecutableManagerTest#testValidStateTransfer": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.util.FlatTableSqlQuoteUtilsTest#testQuoteTableAliasName": [
+    "kylin.source.hive.quote-enabled",
+    "kylin.fact.table.dialect",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.JobEngineConfigTest#testPropertiesHotLoad": [
+    "kylin.job.max-concurrent-jobs",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testSchedulerRestart": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.BasicLocalMetaTest#basicTest": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testTwoClientLockWhenCatchInterruptException": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.util.FlatTableSqlQuoteUtilsTest#testQuoteWithIdentifier": [
+    "kylin.source.hive.quote-enabled",
+    "kylin.fact.table.dialect",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testSingleClientUnlockWhenCatchInterruptExceptionOnPurgeLock": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testSingleClientUnlockWhenCatchInterruptExceptionOnPeekLock": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.util.FlatTableSqlQuoteUtilsTest#testQuoteTableName": [
+    "kylin.source.hive.quote-enabled",
+    "kylin.fact.table.dialect",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testSucceedAndFailed": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testSingleTaskJob": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.ExecutableManagerTest#testDefaultChainedExecutable": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testSucceedAndError": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.ExecutableManagerTest#testInvalidStateTransfer": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testLockForClients": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testSucceed": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.ExecutableManagerTest#test": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testDiscard": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.impl.curator.CuratorLeaderSelectorTest#testGetBasic": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.util.FlatTableSqlQuoteUtilsTest#testQuoteColumnName": [
+    "kylin.source.hive.quote-enabled",
+    "kylin.fact.table.dialect",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testIllegalState": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.execute-output.max-size",
+    "kylin.job.scheduler.safemode",
+    "kylin.job.notification-admin-emails",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testSchedulerStop": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.job.scheduler.safemode",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.util.FlatTableSqlQuoteUtilsTest#testIsTableNameOrAliasNeedToQuote": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.job.impl.threadpool.DefaultSchedulerTest#testRetryableException": [
+    "kylin.metadata.check-copy-on-write",
+    "kylin.server.cluster-servers",
+    "kylin.server.mode",
+    "kylin.job.retry-exception-classes",
+    "kylin.metadata.url",
+    "kylin.metadata.sync-error-handler",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.job.retry",
+    "kylin.job.max-concurrent-jobs",
+    "kylin.job.scheduler.poll-interval-second",
+    "kylin.job.scheduler.priority-considered",
+    "kylin.resourcestore.reconnect-max-ms"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testTwoClientUnlockWhenCatchInterruptExceptionOnPurgeLock": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testTwoClientUnlockWhenCatchInterruptExceptionOnPeekLock": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ],
+  "org.apache.kylin.job.lock.zookeeper.ZookeeperDistributedLockTest#testSingleClientLockWhenCatchInterruptException": [
+    "kylin.env.zookeeper-base-sleep-time",
+    "kylin.server.cluster-name",
+    "kylin.metadata.url",
+    "kylin.env.zookeeper-max-retries",
+    "kylin.env.zookeeper-is-local",
+    "kylin.env.zookeeper-base-path"
+  ]
+}
