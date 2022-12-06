@@ -1,3 +1,4 @@
+#!/bin/bash
 mvn -pl tool test -Dtest=org.apache.kylin.tool.CubeMetaExtractorTest#testExtractorByPrj -Dcheckstyle.skip=true 2>&1 | Tee ../Kylin_test_log_parser/tool_logs/org.apache.kylin.tool.CubeMetaExtractorTest#testExtractorByPrj.log
 mvn -pl tool test -Dtest=org.apache.kylin.tool.HybridCubeCLITest#test1Create -Dcheckstyle.skip=true 2>&1 | Tee ../Kylin_test_log_parser/tool_logs/org.apache.kylin.tool.HybridCubeCLITest#test1Create.log
 mvn -pl tool test -Dtest=org.apache.kylin.tool.HybridCubeCLITest#test2Update -Dcheckstyle.skip=true 2>&1 | Tee ../Kylin_test_log_parser/tool_logs/org.apache.kylin.tool.HybridCubeCLITest#test2Update.log

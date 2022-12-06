@@ -2,11 +2,12 @@ import os
 from tkinter.ttk import Style
 import pandas as pd
 import json 
+import const
 
 # Map log files from common_logs
 SUF_LEN = len(".log")
-LOG = "storage_logs"
-NAME = "storage"
+LOG = const.LOG_FILE
+NAME = const.name
 
 all_value = dict()
 # LOG = "cube_logs"

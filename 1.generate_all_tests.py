@@ -1,13 +1,12 @@
 import os
+import const
 
 # Use bash common_commands to write all test logs to common_logs file
 
 PRE_LEN = len("../")
 SUF_LEN = len(".java")
 THRESHOLD = len('Test.java')
-MODULE_NAME = "tool"
-LOG_FILE = "tool_logs"
-name = "tool"
+
 
 # MODULE_NAME = "core-cube"
 # LOG_FILE = "cube_logs"
@@ -53,7 +52,8 @@ def writeCommandsTests(module, log, name):
         for row in all_names:  
             output.write(row +'\n')
 
-    with open("commands/"+ name +"_commands.txt", "w") as output:
+    with open("commands/"+ name +"_commands.sh", "w") as output:
+        output.write("#!/bin/bash\n")
         for row in all_names:
             # Need to change for other module here
             row_slice = row[len("kylin." + module + ".src.test.java."):]
@@ -62,5 +62,9 @@ def writeCommandsTests(module, log, name):
             curr = curr + " 2>&1 | Tee "+full_dir + ".log"
             output.write(curr + '\n')
 
+    isExist = os.path.exists(name+"_logs")
+    if not isExist:
+        os.makedirs(name+"_logs")
 
-writeCommandsTests(MODULE_NAME, LOG_FILE, name)
+
+writeCommandsTests(const.MODULE_NAME, const.LOG_FILE, const.MODULE_NAME)

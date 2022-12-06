@@ -4,8 +4,8 @@ import os
 import os.path
 import sys
 from pathlib import Path
-
 import pandas as pd
+import const
 
 spec = importlib.util.spec_from_file_location(
     name="my_module",  # note that ".test" is not a valid module name
@@ -23,7 +23,7 @@ sha = "63f9ac6bcd0db005f10935d88747d39fc0819ab7"
 def run_ctest(module_name, test_name, config_parameter, config_value):
     inject(config_parameter, config_value)
     
-    if module_name == "query":
+    if module_name == "query" or module_name == "tool":
         command = "mvn -pl " + module_name + " test -Dtest=" + test_name
     else:
         
@@ -107,7 +107,7 @@ def main():
 
 
 if __name__ == "__main__":
-    module = "storage"
+    module = const.MODULE_NAME
     # testName = "KylinServerDiscoveryTest#test"
     # param = "kylin.job.remote-cli-password"
     # value = ""

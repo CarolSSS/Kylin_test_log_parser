@@ -1,1 +1,107 @@
-{}
+{
+  "org.apache.kylin.tool.HybridCubeCLITest#testSegmentNotOverlap": [
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.source.hive.default-decimal-precision",
+    "kylin.metadata.data-model-impl",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.server.cluster-servers",
+    "kylin.cube.cuboid-scheduler",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.storage.hbase.table-name-prefix",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.source.hive.default-decimal-scale",
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.storage.hbase.namespace",
+    "kylin.cube.segment-advisor",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.metadata.sync-error-handler",
+    "kylin.cube.rowkey.max-size"
+  ],
+  "org.apache.kylin.tool.HybridCubeCLITest#test1Create": [
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.source.hive.default-decimal-precision",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.metadata.data-model-impl",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.server.cluster-servers",
+    "kylin.cube.cuboid-scheduler",
+    "kylin.metadata.sync-error-handler",
+    "kylin.source.hive.default-decimal-scale",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.cube.rowkey.max-size"
+  ],
+  "org.apache.kylin.tool.ClientEnvExtractorTest#testError": [
+    "kylin.job.use-remote-cli",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.tool.CubeMetaExtractorTest#testExtractorByPrj": [
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.source.hive.default-decimal-precision",
+    "kylin.metadata.data-model-impl",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.server.cluster-servers",
+    "kylin.cube.cuboid-scheduler",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.source.hive.default-decimal-scale",
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.metadata.sync-error-handler",
+    "kylin.job.use-remote-cli",
+    "kylin.cube.rowkey.max-size",
+    "kylin.metadata.realization-providers"
+  ],
+  "org.apache.kylin.tool.KylinConfigCLITest#testGetPrefix": [
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.tool.ClientEnvExtractorTest#testTimeout": [
+    "kylin.job.use-remote-cli",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.tool.ClientEnvExtractorTest#testNormal": [
+    "kylin.job.use-remote-cli",
+    "kylin.metadata.url"
+  ],
+  "org.apache.kylin.tool.metrics.systemcube.SCCreatorTest#testExecute": [
+    "kylin.cube.aggrgroup.max-combination",
+    "kylin.metadata.data-model-impl",
+    "kylin.source.hive.default-varchar-precision",
+    "kylin.metrics.subject-query-spark-stage",
+    "kylin.server.cluster-servers",
+    "kylin.metadata.url",
+    "kylin.metadata.check-copy-on-write",
+    "kylin.resourcestore.reconnect-base-ms",
+    "kylin.env",
+    "kylin.metrics.prefix",
+    "kylin.metrics.subject-query-spark-job",
+    "kylin.metadata.custom-dimension-encodings",
+    "kylin.metrics.subject-query-execution",
+    "kylin.resourcestore.reconnect-max-ms",
+    "kylin.metadata.data-model-manager-impl",
+    "kylin.cube.kylin.cube.rowkey-encoding-auto-convert",
+    "kylin.metrics.subject-suffix",
+    "kylin.metrics.subject-job",
+    "kylin.metrics.subject-job-exception",
+    "kylin.cube.aggrgroup.is-mandatory-only-valid",
+    "kylin.metadata.hbasemapping-adapter",
+    "kylin.metadata.sync-error-handler",
+    "kylin.cube.rowkey.max-size"
+  ]
+}

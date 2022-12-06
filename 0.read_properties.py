@@ -7,9 +7,9 @@ lines = open('data/kylin-defaults.properties', "r").readlines()
 for line in lines:
     line = line.strip("\n")
     if "=" in line and line[0] != '#':
-        print(line)
+        # print(line)
         q = pd.DataFrame([line.split('=', 1)],columns =['variable', 'value'])
-        print(q)
+        # print(q)
         df = pd.concat([df, q])
 
 df.to_csv('result/all_default_properties.csv')

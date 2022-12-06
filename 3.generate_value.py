@@ -1,7 +1,7 @@
 import sys
-
 import pandas as pd
 import json
+import const
 
 
 def db_generate(module_name):
@@ -53,30 +53,30 @@ def auto_generate(module_name):
                     # print(j)
                     if (type(j) == type(1.0)):
                         curr = all_generate.get(i, set())
-                        curr.add((j, "GOOD"))
+                        # curr.add((j, "GOOD"))
                         curr.add((0, "GOOD"))
                         curr.add((0.5, "GOOD"))
-                        curr.add((20.5, "GOOD"))
+                        # curr.add((20.5, "GOOD"))
                     elif i[-(len("ratio") + 1):] == "ratio" or i[-(len("coefficient") + 1):] == "coefficient":
-                        curr.add((-10, "BAD"))
+                        # curr.add((-10, "BAD"))
                         curr.add((0.9, "GOOD"))
                         curr.add((0.1, "GOOD"))
                     elif i[-(len("second") + 1):] == "second" or i[-(len("seconds")+ 1):] == "seconds":
                         curr.add((-300, "BAD"))
                         curr.add((0, "GOOD"))
-                        curr.add((0.1, "GOOD"))
+                        # curr.add((0.1, "GOOD"))
                         curr.add((500, "GOOD"))
                     elif (j == 256 or j == 512 or j == 1024 or j == 2048):
                         curr = all_generate.get(i, set())
                         curr.add((512, "GOOD"))
-                        curr.add((1024, "GOOD"))
-                        curr.add((2048, "GOOD"))
+                        # curr.add((1024, "GOOD"))
+                        # curr.add((2048, "GOOD"))
                         curr.add((-100, "BAD"))    
                     else:
                         curr = all_generate.get(i, set())
-                        curr.add((500, "GOOD"))
+                        # curr.add((500, "GOOD"))
                         curr.add((0, "GOOD"))
-                        curr.add((600000, "GOOD"))
+                        # curr.add((600000, "GOOD"))
                         curr.add((-300, "BAD"))
                     all_generate[i] = curr
                 # true false
@@ -95,12 +95,12 @@ def auto_generate(module_name):
                     curr = all_generate.get(i, set())
                     curr.add((j, "GOOD"))
                     curr.add(('KYLIN_', "GOOD"))
-                    curr.add(('HELLO_', "BAD"))
+                    # curr.add(('HELLO_', "BAD"))
                     all_generate[i] = curr
                 # Whether this env is a Dev, QA, or Prod environment
                 elif j == 'Dev' or j == 'QA' or j == 'Prod':
                     curr = all_generate.get(i, set())
-                    curr.add((j, "GOOD"))
+                    # curr.add((j, "GOOD"))
                     curr.add(('Dev', "GOOD"))
                     curr.add(('QA', "GOOD"))
                     curr.add(('Prod', "GOOD"))
@@ -124,7 +124,7 @@ def auto_generate(module_name):
                     curr.add(("query" "GOOD"))
                     curr.add(('all"', "GOOD"))
                     curr.add(('job', "GOOD"))
-                    curr.add(('VERYBADVAL', "BAD"))
+                    # curr.add(('VERYBADVAL', "BAD"))
                     all_generate[i] = curr
                 # Manually check here
                 else:
@@ -153,4 +153,4 @@ def auto_generate(module_name):
 
 
 if __name__ == "__main__":
-    auto_generate("storage")
+    auto_generate(const.MODULE_NAME)
